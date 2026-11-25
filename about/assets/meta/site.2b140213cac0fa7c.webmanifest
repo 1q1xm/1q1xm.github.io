@@ -1,0 +1,19 @@
+{
+  "name": "Lusion",
+  "short_name": "Lusion",
+  "icons": [
+    {
+      "src": "/about/assets/meta/apple-touch-icon.5c673dfea0e1d3e8.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/about/assets/meta/favicon-32x32.438a9ef697b6dc78.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}
