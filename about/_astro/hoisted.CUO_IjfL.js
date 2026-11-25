@@ -4533,17 +4533,6 @@ vec4 cubic(float v){vec4 n=vec4(1.0,2.0,3.0,4.0)-v;vec4 s=n*n*n;float x=s.x;floa
     transitionOverlay.contentShowRatio = 1;
     links.preInit(),pageExtraSections.preInit()}init(){links.init(),pageExtraSections.init()}resize(e,t,r){transitionOverlay.resize(e,t),links.resize(e,t),header.resize(e,t),pageExtraSections.resize(e,t),videoOverlay.resize(e,t);const a=getComputedStyle(document.documentElement).getPropertyValue("--global-border-radius").split("px")[0];properties.globalRadius=properties.sharedUniforms.u_globalRadius.value=parseInt(a)}update(e){transitionOverlay.update(e),links.update(e),header.update(e),pageExtraSections.update(e),videoOverlay.update(e)}}const ui=new UI,AnyItem=properties.loader.ITEM_CLASSES.any;class FontItem extends AnyItem{constructor(e,t){FontItem.dom||FontItem.initDom(),t.loadFunc=()=>{},t.hasLoading=t.hasLoading===void 0?!0:t.hasLoading,t.refText="refing something...",t.refFontSize=t.refFontSize||120,t.refFont="Helvetica, Arial, FreeSans, Garuda, sans-serif",t.interval=t.interval||20,t.refTextWidth=0,super(e,t),this.loadFunc=this._loadFunc.bind(this)}static dom;static initDom(){let e=document.createElement("dom");e.style.position="fixed",e.style.left=e.style.top=0,e.style.visibility="hidden",document.body.appendChild(e),FontItem.dom=e}_loadFunc(e,t,r){let n=e.split(","),a=[];for(let g=0;g<n.length;g++)a.push(n[g].trim());n=this.refFont.split(":");let l=n[0],c=n[1]||"normal",u=n[2]||"normal",f,p=a.length;f=setInterval(()=>{n=a[0].split(":"),l=n[0],c=n[1]||"normal",u=n[2]||"normal";let g=this._getTextWidth(l,c,u,this.refFont),v=this._getTextWidth(this.refFont,c,u,this.refFont);g!==v&&(a.shift(),r.dispatch((p-a.length)/p),a.length===0&&(clearInterval(f),t()))},this.interval)}_getTextWidth=(e,t,r,n)=>{let a=FontItem.dom;return a.style.fontFamily='"'+e+'"'+(n?", "+n:""),a.style.fontWeight=t,a.style.fontStyle=r,a.innerHTML=this.refText,a.getBoundingClientRect().width};_onLoaderLoad(e,t){this.content=t,e(t)}_onLoaderLoading(e,t){e.dispatch(t.loaded/t.total)}}FontItem.type="font";FontItem.extensions=[];let dateTime=performance.now(),_needsResize=!1;
 let initialAssetsReady = false;
-const openingProgress = document.getElementById("about-opening-progress");
-const openingCover = document.querySelector("#about-who[data-edge-spectrum]");
-let openingPercent = 0;
-
-function setOpeningProgress(progress) {
-  const percent = Math.floor(progress * 100);
-  if (percent <= openingPercent) return;
-  openingPercent = percent;
-  openingProgress.style.setProperty("--opening-progress", percent / 100);
-  openingProgress.setAttribute("aria-valuenow", String(percent));
-}
 function preRun(){
   // Settings already captured the initial jump. Keep it out of the reload URL.
   const previewUrl = new URL(location.href);
@@ -4561,41 +4550,41 @@ function preRun(){
   header.show();
   header.ratio = 2;
   properties.loader.register(FontItem),properties.loader.add("Aeonik:400",{type:"font"}),properties.loader.start(progress => {
-    setOpeningProgress(progress * .05);
     if (progress === 1) run();
   });
 }
 function run(){let o=properties.viewportWidth=window.innerWidth,e=properties.viewportHeight=window.innerHeight;properties.viewportResolution=new Vector2(o,e),properties.width=o,properties.height=e,properties.loader.add("Aeonik:500,Aeonik:400:italic,IBMPlexMono:400,IBMPlexMono:500,LusionMono:400",{type:"font"}),app.initEngine(),input.preInit(),scrollManager.init(),pagesManager.preInit(),ui.preInit(),app.preInit(),window.addEventListener("resize",onResize),_onResize(),loop();
   properties.loader.start(progress => {
-    setOpeningProgress(.05 + .85 * progress);
     initialAssetsReady = progress === 1;
   });
 }
 function init(){input.init(),pagesManager.init(),ui.init(),app.init(),properties.hasInitialized=!0}function start(){
   pagesManager.start();
   app.start();
+  const scrollPosition = window.scrollY;
+  const section = Array.from(document.querySelectorAll("#page-container .section"))
+    .find(item => item.getBoundingClientRect().bottom > 0);
+  const sectionOffset = section?.getBoundingClientRect().top;
+  properties.domRoot.classList.add("portfolio-enhanced");
+  window.scrollTo(0, 0);
   properties.hasStarted = true;
   _onResize(true);
+  const sectionTop = section && scrollManager.getDomRange(section, 0, true).top;
+  scrollManager.scrollToPixel(section ? sectionTop - sectionOffset : scrollPosition, true);
   scrollManager.isActive = true;
   if (settings.JUMP_SECTION !== "") {
     scrollManager.scrollTo(settings.JUMP_SECTION, settings.JUMP_OFFSET, true);
   }
 }function onResize(){_needsResize=!0}function _onResize(o){let e=properties.viewportWidth=window.innerWidth,t=properties.viewportHeight=window.innerHeight;properties.viewportResolution.set(e,window.innerHeight),properties.useMobileLayout=e<=settings.MOBILE_WIDTH,document.documentElement.style.setProperty("--vh",t*.01+"px");let r=e*settings.DPR,n=t*settings.DPR;if(settings.USE_PIXEL_LIMIT===!0&&r*n>settings.MAX_PIXEL_COUNT){let a=r/n;n=Math.sqrt(settings.MAX_PIXEL_COUNT/a),r=Math.ceil(n*a),n=Math.ceil(n)}properties.width=r,properties.height=n,properties.webglDPR=properties.width/e,properties.resolution.set(properties.width,properties.height),o||input.resize(),scrollManager.resize(e,t),pagesManager.resize(e,t),ui.resize(e,t,o),app.resize(Math.ceil(r*properties.upscalerAmount),Math.ceil(n*properties.upscalerAmount)),scrollManager.resize(e,t)}function update(o){scrollManager.autoScrollSpeed=properties.autoScrollSpeed,window.__AUTO_SCROLL__&&(scrollManager.autoScrollSpeed=window.__AUTO_SCROLL__),taskManager.update(),properties.reset(),app.preUpdate(o),input.update(o),scrollManager.update(o),pagesManager.update(o),ui.update(o);
-  const pageHasStarted = properties.hasStarted;
-  if (initialAssetsReady && !pageHasStarted) {
+  if (initialAssetsReady && !properties.hasStarted) {
     if (!properties.hasInitialized) init();
-    setOpeningProgress(.9 + .09 * taskManager.percent);
-    if (taskManager.percent === 1) start();
+    // Keep the native navigation and any open dialog usable until their interaction ends.
+    if (taskManager.percent === 1 && document.getElementById("header-menu").inert
+      && !document.querySelector("dialog[open]")) start();
   }
 
   // The first active page update runs before rendering the scene on this frame.
   app.update(o);
-  if (pageHasStarted && (!openingCover || openingCover.hasAttribute("data-cover-ready"))
-    && properties.domRoot.classList.contains("about-starting")) {
-    setOpeningProgress(1);
-    properties.domRoot.classList.remove("about-starting");
-    document.getElementById("ui").inert = false;
-  }
   input.postUpdate(o);
 }
-function loop(){window.requestAnimationFrame(loop);let o=performance.now(),e=(o-dateTime)/1e3;dateTime=o,e=Math.min(e,1/20),_needsResize&&_onResize(),properties.hasStarted&&(properties.startTime+=e),Tween.autoUpdate(e),update(e),_needsResize=!1}preRun();Object.assign||document.documentElement.classList.add("not-supported not-supported--browser");document.documentElement.classList.remove("no-js");/(ipad|iphone|android)/i.test((navigator.userAgent||navigator.vendor).toLowerCase())?document.documentElement.classList.add("is-mobile"):document.documentElement.classList.add("is-desktop");function preventZoom(o){o.preventDefault(),document.body.style.zoom=1}window.addEventListener("wheel",o=>o.preventDefault(),{passive:!1});document.addEventListener("gesturestart",o=>preventZoom(o));document.addEventListener("gesturechange",o=>preventZoom(o));document.addEventListener("gestureend",o=>preventZoom(o));
+function loop(){window.requestAnimationFrame(loop);let o=performance.now(),e=(o-dateTime)/1e3;dateTime=o,e=Math.min(e,1/20),_needsResize&&_onResize(),properties.hasStarted&&(properties.startTime+=e),Tween.autoUpdate(e),update(e),_needsResize=!1}preRun();Object.assign||document.documentElement.classList.add("not-supported not-supported--browser");document.documentElement.classList.remove("no-js");/(ipad|iphone|android)/i.test((navigator.userAgent||navigator.vendor).toLowerCase())?document.documentElement.classList.add("is-mobile"):document.documentElement.classList.add("is-desktop");function preventZoom(o){o.preventDefault(),document.body.style.zoom=1}window.addEventListener("wheel",o=>{if(properties.hasStarted)o.preventDefault()},{passive:!1});document.addEventListener("gesturestart",o=>preventZoom(o));document.addEventListener("gesturechange",o=>preventZoom(o));document.addEventListener("gestureend",o=>preventZoom(o));

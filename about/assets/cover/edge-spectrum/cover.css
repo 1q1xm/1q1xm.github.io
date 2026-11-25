@@ -67,6 +67,29 @@
     white-space: nowrap;
   }
 
+  #about-who[data-edge-spectrum]:not([data-cover-ready]) #hero-title {
+    inset: 50% 0 auto;
+    width: auto;
+    height: auto;
+    margin: 0;
+    clip-path: none;
+    overflow: visible;
+    transform: translateY(-50%);
+    text-align: center;
+    font: 800 clamp(2.35rem, 13vw, 15rem) / .95 Inter, system-ui, sans-serif;
+    letter-spacing: -.055em;
+    pointer-events: none;
+  }
+
+  #about-who[data-edge-spectrum]:not([data-cover-ready]) #hero-title span:last-child {
+    font-size: .52em;
+    letter-spacing: -.035em;
+  }
+
+  #about-who[data-edge-spectrum]:not([data-cover-ready]) :is(.art, .dots) {
+    visibility: hidden;
+  }
+
   #about-who[data-edge-spectrum] .glass-tools {
     position: absolute;
     top: 14.502%;
