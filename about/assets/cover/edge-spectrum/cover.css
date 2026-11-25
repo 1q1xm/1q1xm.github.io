@@ -1,0 +1,172 @@
+@font-face {
+  font-family: "Anton";
+  src: url("anton.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("montserrat.woff2") format("woff2");
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("poppins.woff2") format("woff2");
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("inter.woff2") format("woff2");
+  font-weight: 500 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans SC";
+  src: url("noto-sans-sc.woff2") format("woff2");
+  font-weight: 800;
+  font-display: swap;
+}
+
+#about-who[data-edge-spectrum] {
+    position: relative;
+    isolation: isolate;
+    height: calc(var(--vh, 1vh) * 100);
+    min-height: 460px;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    background: transparent;
+    color: #f5f5f5;
+    font-family: Inter, "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+  }
+  #about-who[data-edge-spectrum] .art, #about-who[data-edge-spectrum] .ui { position: absolute; inset: 0; }
+  #about-who[data-edge-spectrum] .art { cursor: grab; touch-action: pan-y; }
+  #about-who[data-edge-spectrum] .art.dragging { cursor: grabbing; }
+  #about-who[data-edge-spectrum] .art:focus-visible { outline-offset: -4px; }
+  #about-who[data-edge-spectrum] .art:not([tabindex]) { cursor: default; }
+  #about-who[data-edge-spectrum] .art canvas { position: absolute; inset: 0; display: block; width: 100%; height: 100%; }
+  #about-who[data-edge-spectrum] #headline, #about-who[data-edge-spectrum] #headline-outline { mix-blend-mode: screen; }
+  #about-who[data-edge-spectrum] #room-light { pointer-events: none; }
+  #about-who[data-edge-spectrum] .ui { pointer-events: none; }
+  #about-who[data-edge-spectrum] .ui button { pointer-events: auto; font-family: inherit; padding: 0; }
+  #about-who[data-edge-spectrum] [hidden] { display: none !important; }
+  #about-who[data-edge-spectrum] :focus-visible { outline: 2px solid #8bd7ff; outline-offset: 5px; }
+  #about-who[data-edge-spectrum] .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  #about-who[data-edge-spectrum] .glass-tools {
+    position: absolute;
+    top: 14.502%;
+    right: var(--base-padding-x);
+    display: grid;
+    justify-items: end;
+    gap: 10px;
+  }
+  #about-who[data-edge-spectrum] .arrows {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 138px;
+    height: 50px;
+    transform-origin: top right;
+  }
+  #about-who[data-edge-spectrum] .arrows img { position: absolute; inset: 0; display: block; }
+  #about-who[data-edge-spectrum] .arrow { width: 48px; height: 48px; border: 0; border-radius: 50%; background: transparent; cursor: pointer; }
+  #about-who[data-edge-spectrum] .arrow:hover { background: #ffffff1a; }
+  #about-who[data-edge-spectrum] .dots {
+    position: absolute;
+    top: 43.303%;
+    right: var(--base-padding-x);
+    display: grid;
+    grid-auto-rows: 55px;
+    width: 18px;
+    height: 128px;
+  }
+  #about-who[data-edge-spectrum] .dot {
+    position: relative;
+    top: -14px;
+    left: -14px;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+  }
+  #about-who[data-edge-spectrum] .dot::before {
+    content: "";
+    position: absolute;
+    inset: 14px auto auto 14px;
+    width: 18px;
+    height: 18px;
+    /* The exported sprite holds a filled indicator and an outlined indicator. */
+    background: url("slide-indicators.svg") no-repeat;
+  }
+  #about-who[data-edge-spectrum] .dot[aria-pressed="true"]::before { background-position: 0 -55px; }
+
+  #about-who[data-edge-spectrum] .footer {
+    position: absolute;
+    inset: auto var(--base-padding-x) 9.366% var(--base-padding-x);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 16px;
+    min-height: 100px;
+  }
+  #about-who[data-edge-spectrum] .tagline { margin: 0 0 9px; }
+  #about-who[data-edge-spectrum] .tagline::before { content: ""; display: block; width: 44px; height: 1.2px; margin-bottom: 26.8px; background: #b3b3b3; }
+  #about-who[data-edge-spectrum] .tagline span { display: block; color: #c9c9c9; font-size: 24px; line-height: 30px; }
+  #about-who[data-edge-spectrum] .tagline strong { display: block; font: 800 27px/33px Inter, "Noto Sans SC", "PingFang SC", sans-serif; }
+  #about-who[data-edge-spectrum] .cta {
+    display: inline-grid;
+    place-items: center;
+    flex: none;
+    width: 164px;
+    height: 62px;
+    margin-bottom: 2px;
+    border: 0;
+    border-radius: 8px;
+    box-shadow: inset 0 0 0 1.6px #f2f2f2;
+    background: transparent;
+    color: inherit;
+    font-size: 18.6px;
+    font-weight: 500;
+    line-height: 1.2;
+    cursor: pointer;
+    transition: background .25s, color .25s;
+  }
+  #about-who[data-edge-spectrum] .cta:hover { background: #f5f5f5; color: #000; }
+
+  @media (max-width: 850px) {
+    #about-who[data-edge-spectrum] .arrows { transform: scale(.9); }
+    #about-who[data-edge-spectrum] .tagline span { font-size: 18px; line-height: 25px; }
+    #about-who[data-edge-spectrum] .tagline strong { font-size: 21px; line-height: 28px; }
+    #about-who[data-edge-spectrum] .cta { width: 136px; height: 52px; font-size: 16px; }
+  }
+  @media (max-width: 460px) {
+    #about-who[data-edge-spectrum] .glass-tools { top: max(13%, 76px); gap: 3px; }
+    #about-who[data-edge-spectrum] .arrows { transform: scale(.82); }
+    #about-who[data-edge-spectrum] .tagline::before { margin-bottom: 14px; }
+    #about-who[data-edge-spectrum] .tagline span { font-size: 14px; line-height: 20px; }
+    #about-who[data-edge-spectrum] .tagline strong { font-size: 15px; line-height: 22px; }
+    #about-who[data-edge-spectrum] .cta { width: 100px; height: 44px; font-size: 14px; }
+  }
+  @media (max-height: 580px) {
+    #about-who[data-edge-spectrum] .footer { bottom: 5%; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    #about-who[data-edge-spectrum] .cta { transition-duration: 0s; }
+  }

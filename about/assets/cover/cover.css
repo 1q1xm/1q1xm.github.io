@@ -1,0 +1,71 @@
+@font-face {
+  font-family: "Cover Mona";
+  src: url("mona-sans-variable.woff2") format("woff2");
+  font-weight: 200 900;
+  font-display: swap;
+}
+#about-who[data-signature-cover] { background: #111; }
+[data-signature-cover] #about-crosses { display: none; }
+[data-signature-cover] #about-who-title-main {
+  inset: 0;
+  width: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+[data-signature-cover] #about-who-title-main-heading {
+  --crop: 50% 50%;
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  background: #105cb5 url("meadow-selected.png") var(--crop) / cover no-repeat;
+  /* The existing scroll controller fades this heading into the Chinese introduction. */
+  transform: none !important;
+}
+.meadow-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.sky-type {
+  position: absolute;
+  inset: 0;
+  mask: url("sky-mask-selected.png") var(--crop) / cover no-repeat;
+  -webkit-mask: url("sky-mask-selected.png") var(--crop) / cover no-repeat;
+}
+.sky-type svg {
+  position: absolute;
+  left: 0;
+  top: max(6.6rem, 14%);
+  width: 100%;
+  height: 64%;
+  overflow: visible;
+}
+.sky-type svg {
+  font-family: "Cover Mona", "Arial Black", sans-serif;
+  font-size: 255px;
+  font-weight: 900;
+  font-variation-settings: "wght" 900, "wdth" 80;
+}
+.signature-ink {
+  position: absolute;
+  left: 35%;
+  top: 48%;
+  transform: translate(-50%, -50%);
+  width: min(43%, 45rem);
+  height: auto;
+}
+.signature-ink:not([src]) { visibility: hidden; }
+[data-signature-cover] #about-who-title-main-scroll {
+  right: var(--base-padding-x);
+  bottom: var(--base-padding-y);
+  line-height: 1.2;
+  font-size: clamp(.85rem,1.15vw,1.1rem);
+  text-shadow: 0 1px 5px #14210f;
+}
+@media(max-aspect-ratio: 1/1) {
+  [data-signature-cover] #about-who-title-main-heading { --crop: 84% 50%; }
+  .sky-type svg { top: max(4.5rem, 9%); height: 25%; }
+  .signature-ink { left: 33%; top: 29%; width: 60%; }
+}
+@media (max-width: 812px) {
+  [data-signature-cover] #about-who-title-main-scroll { right: 50%; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .sky-type[data-pending] svg { visibility: hidden; }
+}

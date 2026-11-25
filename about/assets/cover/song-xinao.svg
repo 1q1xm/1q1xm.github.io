@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="still" viewBox="0 0 960 380" role="img" aria-labelledby="signature-title">
+  <title id="signature-title">Song Xin’ao</title>
+  <style>
+    .ink {
+      fill: none;
+      stroke: #dfff36;
+      stroke-width: var(--weight, 8);
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .ink {
+        stroke-dasharray: 1 2;
+        visibility: hidden;
+        animation: write var(--duration) var(--pace, cubic-bezier(.38, .1, .46, .96)) var(--start) both;
+      }
+
+      @keyframes write {
+        from { visibility: hidden; stroke-dashoffset: 1.01; }
+        to { visibility: visible; stroke-dashoffset: 0; }
+      }
+    }
+    svg:target .ink {
+      visibility: visible;
+      stroke-dasharray: none;
+      animation: none;
+    }
+  </style>
+
+  <g transform="rotate(-12 480 190)">
+    <!-- Song -->
+    <path class="ink" pathLength="1" style="--duration: 510ms; --start: 75ms; --weight: 9.4"
+      d="M316 103 C345 62 311 47 260 57 C205 67 128 105 110 133 C85 171 150 173 187 182 C225 191 216 211 180 231 C145 251 76 270 68 253 C62 242 86 225 113 211"/>
+    <path class="ink" pathLength="1" style="--duration: 265ms; --start: 562ms; --weight: 7.1"
+      d="M198 224 C214 216 227 194 240 190 C252 186 256 194 250 207 C245 218 233 224 225 220 C217 215 224 200 235 194 C244 188 253 194 252 205 C252 214 265 206 276 194 C283 186 287 186 285 193 C284 201 278 211 276 216 C287 202 297 187 306 189 C315 191 302 205 306 212 C309 219 323 208 335 197"/>
+    <path class="ink" pathLength="1" style="--duration: 250ms; --start: 806ms; --weight: 7.4"
+      d="M353 188 C345 180 331 190 323 204 C316 218 326 224 337 215 C345 209 353 197 359 185 C354 205 346 232 332 251 C320 267 302 275 301 264 C299 252 327 238 348 226 C365 217 379 207 391 195"/>
+
+    <!-- Xin’ao -->
+    <path class="ink" pathLength="1" style="--duration: 265ms; --start: 1080ms; --weight: 9.1"
+      d="M405 107 C393 86 414 71 440 88 C472 108 478 151 493 183 C510 220 534 231 554 212"/>
+    <path class="ink" pathLength="1" style="--duration: 217ms; --start: 1312ms; --weight: 10.2"
+      d="M601 51 C570 86 553 102 523 130 C484 167 425 222 400 275"/>
+    <path class="ink" pathLength="1" style="--duration: 224ms; --start: 1501ms; --weight: 7.3"
+      d="M552 214 C563 199 575 182 580 177 C578 190 565 205 572 209 C577 212 589 204 602 190 C609 182 613 181 612 187 C610 195 604 206 602 211 C612 198 623 182 632 182 C642 183 631 199 633 205 C635 210 645 205 652 199"/>
+    <path class="ink" pathLength="1" style="--duration: 58ms; --start: 1692ms; --weight: 6.2"
+      d="M583 160 Q587 155 590 154"/>
+    <path class="ink" pathLength="1" style="--duration: 77ms; --start: 1732ms; --weight: 6.1"
+      d="M647 167 Q656 161 656 153"/>
+    <path class="ink" pathLength="1" style="--duration: 259ms; --start: 1785ms; --weight: 7.2"
+      d="M652 199 C661 185 674 180 680 185 C686 191 675 207 666 212 C655 218 647 211 653 201 C659 191 672 183 684 186 C681 193 674 206 681 208 C688 211 701 199 712 190 C722 181 733 180 737 186 C743 194 732 207 722 211 C713 215 706 212 707 204 C709 195 718 188 727 187 C737 185 737 196 741 201 C746 206 755 203 768 196"/>
+
+    <!-- The final o leads into one returning sweep. -->
+    <path class="ink" pathLength="1" style="--duration: 225ms; --start: 2017ms; --weight: 6.6; --pace: cubic-bezier(.23, .3, .58, 1)"
+      d="M768 196 C786 187 798 179 804 175 C786 201 706 226 587 251 C451 280 282 308 233 294 C212 288 247 273 294 260"/>
+    <path class="ink" pathLength="1" style="--duration: 174ms; --start: 2216ms; --weight: 4.8; --pace: cubic-bezier(.2, .5, .55, 1)"
+      d="M294 260 C435 220 663 194 793 197 C832 198 861 200 883 205"/>
+  </g>
+</svg>

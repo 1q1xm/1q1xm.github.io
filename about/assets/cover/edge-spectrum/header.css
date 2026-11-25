@@ -1,0 +1,159 @@
+#header {
+  --nav-top: clamp(20px, 5.3374svh, 60px);
+  padding: calc(var(--nav-top) - 10px) var(--base-padding-x) 0;
+  font-family: Inter, "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+}
+
+#header.--menu-opened {
+  color: var(--color-white);
+}
+
+#header #header-container {
+  overflow: visible;
+}
+
+#header #header-logo {
+  color: inherit;
+  font-family: inherit;
+  font-size: 20.6px;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: normal;
+}
+
+#header #header-right {
+  gap: clamp(16px, 6.19vw, 98px);
+  align-items: center;
+}
+
+#header #header-right-sound-btn,
+#header #header-right-talk-btn-placeholder {
+  display: none;
+}
+
+#header #header-right :is(#header-case-studies-btn, #header-right-talk-btn, #header-right-menu-btn) {
+  position: relative;
+  display: block !important;
+  inset: auto;
+  width: auto;
+  min-width: 0;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 18.4px;
+  font-weight: 500;
+  line-height: 1.2;
+  white-space: nowrap;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: none;
+}
+
+#header #header-right-talk-container {
+  opacity: 1 !important;
+}
+
+#header #header-right-talk-btn #header-right-talk-btn-text {
+  transform: none;
+  transition: none;
+}
+
+#header #header-right-menu-btn-inner {
+  display: grid;
+  place-items: center;
+  inset: auto;
+}
+
+#header #header-right-menu-btn-inner > span {
+  position: static;
+  display: block;
+  grid-area: 1 / 1;
+  font: inherit;
+  transform: none;
+  transition: none;
+}
+
+#header #header-right-menu-btn-text-close,
+#header #header-right-menu-btn[aria-expanded="true"] #header-right-menu-btn-text {
+  visibility: hidden;
+}
+
+#header #header-right-menu-btn[aria-expanded="true"] #header-right-menu-btn-text-close {
+  visibility: visible;
+  transform: none;
+}
+
+#header #header-right button::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 7px;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .35s ease;
+}
+
+#header #header-right :is(#header-case-studies-btn, #header-right-talk-btn, #header-right-menu-btn):is(:hover, :focus-visible)::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+#header #header-menu {
+  top: calc(var(--nav-top) + 42px);
+}
+
+#header-menu-links [aria-current="location"] .header-menu-link-inner::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: .75em;
+  width: .4em;
+  height: .4em;
+  border-radius: 50%;
+  background: var(--color-black);
+  transform: translate(50%, -50%);
+}
+
+#header-menu-links .header-menu-link:disabled {
+  cursor: default;
+}
+
+#header-menu-links .header-menu-link:disabled :is(.header-menu-link-background, .header-menu-link-svg) {
+  transition: none;
+}
+
+@media (max-width: 850px) {
+  #header #header-logo {
+    font-size: 16px;
+  }
+
+  #header #header-right {
+    gap: clamp(12px, 3.5vw, 28px);
+  }
+
+  #header #header-right :is(#header-case-studies-btn, #header-right-talk-btn, #header-right-menu-btn) {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 460px) {
+  #header #header-logo,
+  #header #header-right :is(#header-case-studies-btn, #header-right-talk-btn, #header-right-menu-btn) {
+    font-size: 13px;
+  }
+
+  #header #header-right {
+    gap: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #header #header-right button::after {
+    transition: none;
+  }
+}

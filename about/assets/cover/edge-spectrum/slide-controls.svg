@@ -1,0 +1,8 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="138" height="50" viewBox="0 0 138 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Slide controls">
+<circle id="Previous slide" cx="24" cy="24" r="23.15" stroke-width="1.7" stroke="#D8D8D8"/>
+<path id="Left arrow" d="M33 24H15M21 30L15 24L21 18" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="#EFEFEF"/>
+<circle id="Next slide" cx="114" cy="24" r="23.15" stroke-width="1.7" stroke="#D8D8D8"/>
+<path id="Right arrow" d="M105 24H123M117 30L123 24L117 18" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke="#EFEFEF"/>
+</g>
+</svg>

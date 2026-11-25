@@ -1,0 +1,232 @@
+.resume-sheet.section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-content: center;
+  min-height: calc(var(--vh, 1vh) * 100);
+  padding: clamp(76px, 10vh, 108px) var(--cover-gutter) clamp(32px, 6vh, 64px);
+  color: #f3f2e9;
+}
+
+.resume-panel {
+  --resume-line: rgb(160 181 220 / 22%);
+  --resume-muted: #abb6cc;
+  display: grid;
+  grid-template-columns: minmax(190px, 1fr) minmax(0, 3fr);
+  width: min(100%, 1420px);
+  margin-inline: auto;
+  border: 1px solid var(--resume-line);
+  border-radius: 10px;
+  background: rgb(6 10 23 / 58%);
+  font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  font-size: clamp(13px, 1.08vw, 16px);
+  line-height: 1.55;
+}
+
+.resume-identity,
+.resume-content {
+  min-width: 0;
+  padding: clamp(20px, 2.5vw, 40px);
+}
+
+.resume-identity {
+  border-inline-end: 1px solid var(--resume-line);
+}
+
+.resume-portrait {
+  display: block;
+  width: 100%;
+  height: clamp(174px, 34vh, 315px);
+  object-fit: cover;
+  object-position: 51% 34%;
+  filter: saturate(.35);
+  border: 1px solid var(--resume-line);
+  border-radius: 6px;
+  background: #101725;
+}
+
+.resume-identity-copy {
+  margin-top: clamp(15px, 2vh, 24px);
+}
+
+.resume-identity-copy .resume-name {
+  margin: 0 0 .2em;
+  font: 700 clamp(25px, 2.65vw, 42px)/1.2 "Cover ShuHeiTi", "Noto Sans SC", sans-serif;
+}
+
+.resume-identity-copy p,
+.resume-identity-copy dl,
+.resume-identity-copy dd {
+  margin: 0;
+}
+
+.resume-identity-copy .resume-location {
+  color: var(--resume-muted);
+  margin-top: .3em;
+}
+
+.resume-identity-copy dl {
+  margin-top: 1em;
+  padding-top: .8em;
+  border-top: 1px solid var(--resume-line);
+}
+
+.resume-identity-copy dt {
+  color: var(--resume-muted);
+  font-size: .88em;
+}
+
+.resume-identity-copy dd {
+  letter-spacing: .02em;
+}
+
+.resume-identity-copy a {
+  color: inherit;
+}
+
+.resume-heading h2 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .35em 1em;
+  margin: 0;
+  line-height: 1;
+}
+
+.resume-heading h2 [lang="en"] {
+  font: 700 clamp(46px, 6vw, 84px)/.95 "Cover Brier", Georgia, serif;
+  letter-spacing: -.055em;
+}
+
+.resume-heading h2 [lang="zh-CN"] {
+  color: #8eadff;
+  font-size: clamp(14px, 1.4vw, 20px);
+  font-weight: 650;
+}
+
+.resume-heading p {
+  max-width: 53em;
+  margin: .8em 0 0;
+  color: var(--resume-muted);
+}
+
+.resume-career {
+  margin-top: clamp(17px, 2.6vh, 26px);
+}
+
+.resume-content h3 {
+  margin: 0 0 .45em;
+  font-size: clamp(15px, 1.3vw, 20px);
+  font-weight: 700;
+}
+
+.resume-jobs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.resume-job {
+  display: grid;
+  grid-template-columns: minmax(7em, .82fr) minmax(0, 2fr) max-content;
+  gap: .35em 1.2em;
+  align-items: baseline;
+  padding-block: .65em;
+  border-top: 1px solid var(--resume-line);
+}
+
+.resume-job h4,
+.resume-job p,
+.resume-job ul,
+.resume-end p {
+  margin: 0;
+}
+
+.resume-job h4 {
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.resume-role,
+.resume-date,
+.resume-end p + p {
+  color: var(--resume-muted);
+  font-size: .88em;
+}
+
+.resume-date {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.resume-job ul {
+  padding: 0;
+  list-style: none;
+}
+
+.resume-job li + li {
+  margin-top: .2em;
+}
+
+.resume-side-label {
+  color: #8eadff;
+}
+
+.resume-end {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: .85em 2em;
+  padding-top: .85em;
+  border-top: 1px solid var(--resume-line);
+}
+
+@media (max-width: 980px) {
+  .resume-job {
+    grid-template-columns: minmax(0, 1fr) max-content;
+  }
+
+  .resume-job .resume-projects {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+}
+
+@media (max-width: 760px) {
+  .resume-sheet.section {
+    min-height: 0;
+    padding-block: 65px 42px;
+  }
+
+  .resume-panel {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .resume-identity {
+    display: grid;
+    grid-template-columns: minmax(86px, 1fr) minmax(0, 1.6fr);
+    gap: 16px;
+    align-items: center;
+    border-inline-end: none;
+    border-bottom: 1px solid var(--resume-line);
+  }
+
+  .resume-portrait {
+    height: auto;
+    aspect-ratio: 4 / 5;
+    max-height: 190px;
+  }
+
+  .resume-identity-copy {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 460px) {
+  .resume-identity,
+  .resume-content {
+    padding: 16px;
+  }
+
+  .resume-end {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

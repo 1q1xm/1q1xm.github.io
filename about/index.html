@@ -1,0 +1,958 @@
+<!DOCTYPE html><html lang="zh-CN" data-portfolio-silent class="no-js is-black-bg about-starting"> <head><title>宋新奥 · 设计作品集</title>
+<script>
+  if (location.protocol === "file:") {
+    const preview = new URL("http://127.0.0.1:8768/about/");
+    preview.search = location.search;
+    preview.hash = location.hash;
+    location.replace(preview.href);
+  }
+</script>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><base href="/about/"><meta name="description" content="宋新奥的产品与 UX 设计作品集，包含消费选购体验、商家端工具和界面设计项目。"><link id="apple-touch-icon" rel="apple-touch-icon" sizes="180x180" href="./assets/meta/apple-touch-icon.png"><link id="icon32" rel="icon" type="image/png" sizes="32x32" href="./assets/meta/favicon-32x32.png" media="(prefers-color-scheme: light)"><link id="icon32" rel="icon" type="image/png" sizes="32x32" href="./assets/meta/dark/favicon-32x32.png" media="(prefers-color-scheme: dark)"><link id="icon64" rel="icon" type="image/png" sizes="16x16" href="./assets/meta/favicon-16x16.png" media="(prefers-color-scheme: light)"><link id="icon64" rel="icon" type="image/png" sizes="16x16" href="./assets/meta/dark/favicon-16x16.png" media="(prefers-color-scheme: dark)"><link href="./assets/meta/favicon.ico" rel="shortcut icon" media="(prefers-color-scheme: light)"><link href="./assets/meta/dark/favicon.ico" rel="shortcut icon" media="(prefers-color-scheme: dark)"><link id="manifest" rel="manifest" href="./assets/meta/site.webmanifest"><link rel="mask-icon" href="./assets/meta/safari-pinned-tab.svg" color="#000000"><meta name="msapplication-TileColor" content="#ffffff"><meta name="theme-color" content="#ffffff"><meta property="og:description" content="宋新奥的产品与 UX 设计作品集，包含消费选购体验、商家端工具和界面设计项目。"><meta property="og:locale" content="zh_CN"><meta property="og:site_name" content="宋新奥 · 设计作品集"><meta property="og:title" content="宋新奥 · 设计作品集"><meta property="og:type" content="website"><!-- Google tag (gtag.js) --><link rel="stylesheet" href="/about/_astro/about.CNa9RfUh.css?v=menu-states"><script type="module" src="/about/_astro/hoisted.CUO_IjfL.js?v=opening-ready"></script>
+<meta name="format-detection" content="telephone=no">
+<style>
+  html.is-black-bg body {
+    background-color: var(--color-black);
+  }
+
+  #about-opening {
+    position: fixed;
+    inset: 0;
+    z-index: 110;
+    display: grid;
+    place-items: center;
+    background: var(--color-black);
+    color: var(--color-off-white);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .about-starting #about-opening {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  #about-opening-progress {
+    width: 3.5rem;
+    height: 4px;
+    border-radius: 2px;
+    background: rgb(240 241 250 / 18%);
+    overflow: hidden;
+    visibility: hidden;
+  }
+
+  .about-starting #about-opening-progress {
+    animation: about-opening-show 0s .5s forwards;
+  }
+
+  #about-opening-progress::after {
+    content: "";
+    display: block;
+    height: 100%;
+    background: currentColor;
+    border-radius: inherit;
+    transform: scaleX(var(--opening-progress, 0));
+    transform-origin: left center;
+    transition: transform .18s ease-out;
+  }
+
+  #about-opening-retry {
+    position: absolute;
+    top: calc(50% + 1rem);
+    padding: .75rem;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: 400 .875rem system-ui, sans-serif;
+    text-decoration: underline;
+    cursor: pointer;
+    visibility: hidden;
+  }
+
+  .about-starting #about-opening-retry {
+    animation: about-opening-show 0s 15s forwards;
+  }
+
+  @keyframes about-opening-show {
+    to { visibility: visible; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #about-opening-progress::after {
+      transition: none;
+    }
+  }
+
+  #about-award {
+    --work-company-column: calc(var(--width-size) + 2.5em);
+    --work-role-column: 7.25em;
+  }
+
+  #selected-work .about-award-item-wrapper,
+  #profile .resume-profile,
+  #education .resume-education,
+  #skills .resume-skills {
+    margin-inline-start: var(--margin-left);
+  }
+
+  #selected-work .about-award-item-wrapper {
+    display: grid;
+    grid-template-columns: var(--work-company-column) var(--work-role-column) minmax(0, 1fr);
+    align-items: start;
+  }
+
+  #selected-work .selected-work-role,
+  #selected-work .selected-work-description,
+  #selected-work .selected-work-date {
+    color: var(--color-off-white-semi);
+  }
+
+  #about-award .about-award-item-wrapper-text .word {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  #selected-work .selected-work-date {
+    display: block;
+    margin-block-start: .25em;
+    font-size: 1em;
+    line-height: 1.5;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+
+  #selected-work .selected-work-description {
+    margin: .35em 0 0;
+    line-height: 1.55;
+  }
+
+  #selected-work .selected-work-role {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+
+  #selected-work-title {
+    line-height: 1.2;
+  }
+
+  #selected-work {
+    position: relative;
+  }
+
+  @media (max-width: 600px) {
+    #selected-work .about-award-item-wrapper {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: .55em 1em;
+      font-size: max(1em, .875rem);
+    }
+
+    #selected-work .selected-work-project {
+      grid-column: 1 / -1;
+    }
+
+    #selected-work .selected-work-role {
+      text-align: right;
+    }
+
+    #selected-work-title,
+    .resume-details .about-award-header-title {
+      font-size: clamp(1.5rem, 7vw, 2.5rem);
+    }
+  }
+
+  .resume-details .about-award-header-title {
+    line-height: 1.2;
+  }
+
+  .resume-details .about-award-item-wrapper {
+    display: grid;
+    gap: .55rem 1.5rem;
+    align-items: baseline;
+    line-height: 1.55;
+  }
+
+  .resume-details .about-award-item-wrapper-text {
+    font-size: max(1rem, 1.25em);
+  }
+
+  .resume-details h3 {
+    font-weight: 500;
+  }
+
+  .resume-details .resume-note,
+  .resume-details .resume-dates {
+    color: var(--color-off-white-semi);
+  }
+
+  .resume-education {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .resume-education .resume-note {
+    grid-column: 1 / -1;
+  }
+
+  .resume-skills {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  @media (width > 600px) {
+    .resume-skills .about-award-item-wrapper {
+      grid-template-columns: max-content minmax(0, 1fr);
+      column-gap: 1em;
+    }
+
+    .resume-skills .resume-note {
+      text-align: end;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .resume-details .about-award-item-wrapper {
+      grid-template-columns: minmax(0, 1fr);
+      gap: .2rem;
+    }
+
+    .resume-skills .about-award-item-wrapper:not(:first-child) {
+      margin-top: .9rem;
+    }
+  }
+
+  .resume-details .resume-profile {
+    grid-template-columns: minmax(0, calc(var(--work-company-column) + var(--work-role-column))) minmax(0, 1fr);
+    gap: 0;
+  }
+
+  .resume-profile-group {
+    display: grid;
+    justify-items: start;
+    gap: .25rem;
+  }
+
+  .resume-details .resume-profile-primary {
+    font-size: clamp(1.125rem, 1.6vw, 1.5rem);
+    font-weight: 500;
+    line-height: 1.35;
+  }
+
+  .resume-profile .resume-note {
+    font-size: max(.875rem, 1.05em);
+  }
+
+  .portfolio-phone {
+    margin: 0;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+    -webkit-user-select: text;
+    user-select: text;
+  }
+
+  @media (max-width: 600px) {
+    .resume-details .resume-profile {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 1rem;
+    }
+  }
+
+  #about-who-title-left-4,
+  #about-who-title-right,
+  #about-who-desc-top > .is-italic {
+    font-style: normal;
+  }
+
+  #about-capability[data-case-studies] {
+    --case-title-size: 10.5vw;
+  }
+
+  #about-capability[data-case-studies] #about-capability-title {
+    margin-top: calc(1.45em - var(--base-padding-y));
+    font-size: var(--case-title-size);
+    line-height: 1.08;
+  }
+
+  #about-capability[data-case-studies] #about-capability-title-line-2 {
+    left: 1.6em;
+  }
+
+  #about-capability[data-case-studies] #about-capability-subheader {
+    top: calc(var(--case-title-size) * 1.63);
+    left: 62vw;
+    right: var(--base-padding-x);
+    width: auto;
+    margin: 0;
+    line-height: 1.55;
+  }
+
+  #about-capability[data-case-studies] #about-capability-subheader-text {
+    margin: 0;
+    text-transform: none;
+  }
+
+  #about-capability .case-section-label {
+    margin-bottom: .7em;
+    font-size: clamp(.75rem, 1vw, 1rem);
+    font-weight: 600;
+    letter-spacing: .13em;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  #about-capability .case-section-description {
+    color: var(--color-off-white);
+    font-size: clamp(1.0625rem, 1.7vw, 1.75rem);
+    line-height: 1.24;
+  }
+
+  @media (min-width: 813px) and (min-aspect-ratio: 21/9) {
+    #about-capability[data-case-studies] {
+      --case-title-size: 8vw;
+    }
+  }
+
+  @media (max-width: 812px) {
+    #about-capability[data-case-studies] {
+      --case-title-size: 17vw;
+    }
+
+    #about-capability[data-case-studies] #about-capability-title-line-2 {
+      left: .55em;
+    }
+
+    #about-capability[data-case-studies] #about-capability-subheader {
+      position: static;
+      margin-top: clamp(1.25rem, 4vw, 2rem);
+    }
+  }
+
+  @media (min-width: 813px) {
+    #about-capability[data-case-studies] .about-capability-card {
+      width: calc(var(--grid-space) * 4 + var(--grid-gap) * 3);
+    }
+  }
+
+  @font-face {
+    font-family: "Noto Sans SC Case Cards";
+    src: url("/about/assets/fonts/noto-sans-sc-case-cards.woff2") format("woff2");
+    font-weight: 400 500;
+    font-display: swap;
+  }
+
+  /* Scale the fixed Figma artboard layout with each card's width. */
+  #about-capability .about-capability-card {
+    aspect-ratio: 899.09 / 1165.33;
+  }
+
+  #about-capability :is(.case-card, .about-capability-card-back) {
+    border-radius: 4.65% / 3.59%;
+  }
+
+  #about-capability .about-capability-card-back {
+    background-size: 100% 100%;
+  }
+
+  #about-capability .about-capability-card-back::before,
+  #about-capability .about-capability-card-back::after {
+    content: "";
+    position: absolute;
+    inset: 50% auto auto 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  #about-capability .about-capability-card-back::before {
+    width: 17%;
+    height: 15%;
+    background: var(--color-blue);
+  }
+
+  #about-capability .about-capability-card-back::after {
+    width: 11.2%;
+    height: 11.1%;
+    background: var(--color-white);
+    mask: url("/about/assets/images/case-studies/figma-good-products-mark.svg") center / 100% 100% no-repeat;
+  }
+
+  #about-capability .case-card {
+    inset: 0;
+    display: block;
+    padding: 0;
+    border: 0;
+    background: #fff;
+    color: #111;
+    font-family: "Noto Sans SC Case Cards", "PingFang SC", sans-serif;
+    text-align: start;
+    cursor: pointer;
+    container-type: inline-size;
+  }
+
+  #about-capability .case-card-brand {
+    position: absolute;
+    inset: 6.46% auto auto 7.13%;
+    font-size: 6.326cqw;
+    line-height: 1.196;
+  }
+
+  #about-capability .case-card-mark {
+    position: absolute;
+    inset: 6.58% auto auto 86.98%;
+    width: 4.961cqw;
+    height: auto;
+  }
+
+  #about-capability .case-card--campus .case-card-mark {
+    inset: 6.33% auto auto 86.72%;
+    width: 5.47cqw;
+  }
+
+  #about-capability .case-card-artwork {
+    position: absolute;
+    inset: 17.70% auto auto 6.51%;
+    width: 86.82%;
+    height: 46.77%;
+    overflow: hidden;
+    border-radius: 3.72cqw;
+  }
+
+  #about-capability .case-card-artwork img {
+    position: absolute;
+    display: block;
+    top: -61.13%;
+    left: -20.54%;
+    width: 141.43%;
+    height: 261.45%;
+    max-width: none;
+  }
+
+  #about-capability .case-card--campus .case-card-artwork img {
+    top: 0;
+    left: -12.04%;
+    width: 124.05%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  #about-capability .case-card-name {
+    position: absolute;
+    inset: 68.42% auto auto 6.82%;
+    color: #171627;
+    font-size: 5.954cqw;
+    font-weight: 500;
+    line-height: 1.196;
+  }
+
+  #about-capability .case-card-description {
+    position: absolute;
+    inset: 75.84% auto auto 7.44%;
+    color: #8d8b9f;
+    font-size: 3.566cqw;
+    line-height: 1.185;
+  }
+
+  #about-capability .case-card-footer {
+    position: absolute;
+    inset: 84.81% 6.82% auto 7.44%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10.05%;
+    padding: 4.12cqw 0 0 .31cqw;
+    border-top: .217cqw solid #e8e5f0;
+    color: #17171c;
+    font-size: 4.031cqw;
+    line-height: 1.185;
+  }
+
+  #about-capability .case-card-icon {
+    display: grid;
+    place-items: center;
+  }
+
+  #about-capability .case-card-icon img {
+    grid-area: 1 / 1;
+    width: 8.682cqw;
+    height: auto;
+  }
+
+  #about-capability .case-card-icon .case-card-arrow {
+    width: 4.341cqw;
+  }
+
+  #about-capability .case-card:is(:hover, :focus-visible) .case-card-action {
+    color: #07094b;
+    text-decoration: underline;
+    text-underline-offset: .2em;
+  }
+
+  #about-capability :is(.case-card, .case-dismiss):focus-visible {
+    outline: 2px solid #101eb8;
+    outline-offset: -5px;
+  }
+
+  @media (max-width: 812px) {
+    #about-capability[data-case-studies] .about-capability-card:nth-child(odd) {
+      float: left;
+    }
+
+    #about-capability[data-case-studies] .about-capability-card:nth-child(even) {
+      float: right;
+    }
+  }
+
+  @media (max-width: 560px) {
+    #about-capability[data-case-studies] .about-capability-card {
+      margin-top: 0;
+    }
+
+    #about-capability[data-case-studies] .about-capability-card + .about-capability-card {
+      margin-top: 1.5rem;
+    }
+  }
+
+  #about-capability .case-dialog {
+    width: min(42rem, calc(100% - 2rem));
+    max-height: calc(100dvh - 2rem);
+    padding: clamp(1.25rem, 5vw, 3.5rem);
+    border: 1px solid #747df6;
+    border-radius: 1rem;
+    background: #121751;
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.65;
+    overscroll-behavior: contain;
+  }
+
+  #about-capability .case-dialog::backdrop { background: rgb(5 9 36 / 82%); }
+  #about-capability .case-dialog-heading {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: .5rem 1rem;
+    margin: 0 0 .75rem;
+  }
+  #about-capability .case-dialog h2 {
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    line-height: 1.2;
+    margin: 0;
+  }
+  #about-capability .case-dialog h3 { font-size: 1rem; margin: 1.4rem 0 .3rem; }
+  #about-capability .case-dialog p { margin: .35rem 0 0; color: #e2e6ff; }
+  #about-capability .case-dismiss {
+    padding: .3rem .8rem;
+    border: 1px solid #a6afff;
+    border-radius: 2rem;
+    background: transparent;
+    color: #fff;
+    font: inherit;
+    cursor: pointer;
+  }
+
+  #end-section-title-link[lang="zh-CN"] .end-section-title-link-word {
+    height: 1.02em;
+    vertical-align: top;
+  }
+
+  #end-section-title-link[lang="zh-CN"] .char-wrapper {
+    top: 0;
+    vertical-align: top;
+  }
+
+  div#header-right-sound-btn {
+    cursor: default;
+  }
+
+  #end-section-title-top-decoration,
+  #end-section-title-bottom-left-decoration,
+  #end-section-title-bottom-right-decoration {
+    display: none;
+  }
+</style>
+<link rel="stylesheet" href="assets/cover/logo-wall.css?v=cover-spacing-4">
+<link rel="stylesheet" href="assets/cover/edge-spectrum/cover.css?v=original-mouse-effect">
+<link rel="stylesheet" href="assets/cover/edge-spectrum/header.css?v=black-menu-dot">
+<script type="module" src="assets/cover/edge-spectrum/cover.mjs?v=original-mouse-effect"></script>
+</head> <body>
+<div id="about-opening">
+  <div id="about-opening-progress" role="progressbar" aria-label="首屏加载" lang="zh-CN" aria-valuenow="0"></div>
+  <button id="about-opening-retry" lang="zh-CN" type="button" onclick="location.reload()">重新加载</button>
+</div>
+<canvas id="canvas"></canvas> <div id="ui" inert> <header id="header"> <div id="header-container"> <div id="header-background"></div> <a id="header-logo" href="/about/#about-who" aria-label="宋新奥 · 作品集首页"><span lang="en">SONGXINAO</span></a>
+ <div id="header-center"> <button id="header-center-project-back-btn" aria-label="Back"> <svg id="header-center-project-back-btn-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M8 12.243 3.757 8m0 0L8 3.757M3.757 8h8.486"></path></svg> <p id="header-center-project-back-btn-text">back</p> <svg id="header-center-project-back-btn-svg2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M8 12.243 3.757 8m0 0L8 3.757M3.757 8h8.486"></path></svg> <div id="project-details-header-back-background"></div> </button> </div> <nav id="header-right" aria-label="主导航"> <div id="header-right-sound-btn" aria-hidden="true"><canvas></canvas></div>   <button id="header-right-talk-btn-placeholder"></button> <button id="header-right-talk-btn" type="button" lang="zh-CN" data-scroll-to="profile" aria-controls="profile"> <div id="header-right-talk-container"> <span id="header-right-talk-btn-text">联系方式</span> </div> </button> <button id="header-case-studies-btn" type="button" data-scroll-to="about-capability" aria-controls="about-capability">项目案例</button> <button id="header-right-menu-btn" type="button" lang="zh-CN" aria-controls="header-menu" aria-expanded="false" aria-label="导航"> <div id="header-right-menu-btn-inner"> <span id="header-right-menu-btn-text" aria-hidden="true">导航</span> <span id="header-right-menu-btn-text-close" aria-hidden="true">关闭</span> </div> </button> </nav> <div id="header-menu" inert lang="zh-CN">
+  <nav id="header-menu-links" aria-label="作品集导航">
+    <button type="button" class="header-menu-link" data-scroll-to="about-who" aria-controls="about-who">
+      <span class="header-menu-link-background"></span>
+      <span class="header-menu-link-inner">
+        <span class="header-menu-link-text">首页封面</span>
+        <svg aria-hidden="true" class="header-menu-link-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.515 12h16.97m0 0L13.01 4.525M20.485 12l-7.475 7.476"></path></svg>
+      </span>
+    </button>
+    <button type="button" class="header-menu-link" data-scroll-to="profile" aria-controls="profile">
+      <span class="header-menu-link-background"></span>
+      <span class="header-menu-link-inner">
+        <span class="header-menu-link-text">个人信息</span>
+        <svg aria-hidden="true" class="header-menu-link-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.515 12h16.97m0 0L13.01 4.525M20.485 12l-7.475 7.476"></path></svg>
+      </span>
+    </button>
+    <button type="button" class="header-menu-link" data-scroll-to="selected-work" aria-controls="selected-work">
+      <span class="header-menu-link-background"></span>
+      <span class="header-menu-link-inner">
+        <span class="header-menu-link-text">工作经验</span>
+        <svg aria-hidden="true" class="header-menu-link-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.515 12h16.97m0 0L13.01 4.525M20.485 12l-7.475 7.476"></path></svg>
+      </span>
+    </button>
+    <button type="button" class="header-menu-link" data-scroll-to="education" aria-controls="education">
+      <span class="header-menu-link-background"></span>
+      <span class="header-menu-link-inner">
+        <span class="header-menu-link-text">教育经历</span>
+        <svg aria-hidden="true" class="header-menu-link-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.515 12h16.97m0 0L13.01 4.525M20.485 12l-7.475 7.476"></path></svg>
+      </span>
+    </button>
+    <button type="button" class="header-menu-link" data-scroll-to="skills" aria-controls="skills">
+      <span class="header-menu-link-background"></span>
+      <span class="header-menu-link-inner">
+        <span class="header-menu-link-text">专业技能</span>
+        <svg aria-hidden="true" class="header-menu-link-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.515 12h16.97m0 0L13.01 4.525M20.485 12l-7.475 7.476"></path></svg>
+      </span>
+    </button>
+    <button type="button" class="header-menu-link" data-scroll-to="about-capability" aria-controls="about-capability">
+      <span class="header-menu-link-background"></span>
+      <span class="header-menu-link-inner">
+        <span class="header-menu-link-text">项目案例</span>
+        <svg aria-hidden="true" class="header-menu-link-svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.515 12h16.97m0 0L13.01 4.525M20.485 12l-7.475 7.476"></path></svg>
+      </span>
+    </button>
+  </nav>
+</div>
+</div>
+</header> <div id="page-container"> <div id="page-container-inner"> <div id="about" class="page"> <section id="about-who" class="section" data-edge-spectrum aria-labelledby="hero-title">
+  <h1 class="sr-only" id="hero-title" lang="en"><span>SONGXINAO</span><br><span>2026 PORTFOLIO</span></h1>
+  <div class="art" id="art" role="group" tabindex="0" aria-label="可旋转的玻璃方块，拖动或使用方向键旋转。">
+    <canvas id="room-light" aria-hidden="true" hidden></canvas>
+    <canvas id="headline-outline" aria-hidden="true" hidden></canvas>
+    <canvas id="headline" aria-hidden="true"></canvas>
+    <canvas id="glass" aria-hidden="true"></canvas>
+  </div>
+  <div class="ui">
+    <div class="glass-tools" hidden>
+      <div class="arrows" role="group" aria-label="旋转玻璃方块">
+        <img src="assets/cover/edge-spectrum/slide-controls.svg" width="138" height="50" alt="">
+        <button class="arrow" type="button" id="prev" aria-label="向左旋转"></button>
+        <button class="arrow" type="button" id="next" aria-label="向右旋转"></button>
+      </div>
+    </div>
+    <div class="dots" role="group" aria-label="玻璃方块视角">
+      <button class="dot" type="button" aria-label="左侧视角" aria-pressed="false"></button>
+      <button class="dot" type="button" aria-label="正面视角" aria-pressed="true"></button>
+      <button class="dot" type="button" aria-label="右侧视角" aria-pressed="false"></button>
+    </div>
+    <div class="footer">
+      <p class="tagline"><span>我是新奥</span><strong>一個产品设计工程师</strong></p>
+      <button class="cta" id="explore" type="button" data-scroll-to="about-clients" aria-controls="about-clients">继续探索</button>
+    </div>
+  </div>
+</section>
+<section id="about-clients" class="section logo-wall" lang="zh-CN" aria-label="产品与技能">
+  <div id="about-clients-header" lang="en">
+    <div id="about-clients-title" role="heading" aria-level="2" aria-label="PRODUCTS &amp; TOOLS">PRODUCTS &amp; TOOLS</div>
+    <div id="about-clients-desc">Consumer apps, merchant platforms, and my design, video, and AI toolkit.</div>
+  </div>
+  <p class="logo-wall-sr-only">产品与品牌：美团、小米、SHEIN、美团外卖、米家、校园解决方案中心。工具：Figma、After Effects、Photoshop、剪映、ChatGPT、LiblibAI、Claude、Cursor、CatPaw。</p>
+  <div id="about-clients-carousel" aria-hidden="true">
+    <div class="about-clients-carousel-line">
+      <img src="assets/images/products-skills/wall/meituan.svg" alt="">
+      <img src="assets/images/products-skills/wall/xiaomi.svg" alt="" data-tone="bright">
+      <img src="assets/images/products-skills/wall/shein.svg" alt="">
+      <img src="assets/images/products-skills/wall/meituan-waimai.svg" alt="">
+      <img src="assets/images/products-skills/wall/mijia.svg" alt="" data-tone="bright">
+      <img src="assets/images/products-skills/wall/campus.svg" alt="">
+      <img src="assets/images/products-skills/wall/meituan.svg" alt="">
+      <img src="assets/images/products-skills/wall/xiaomi.svg" alt="" data-tone="bright">
+      <img src="assets/images/products-skills/wall/shein.svg" alt="">
+      <img src="assets/images/products-skills/wall/meituan-waimai.svg" alt="">
+      <img src="assets/images/products-skills/wall/mijia.svg" alt="" data-tone="bright">
+      <img src="assets/images/products-skills/wall/campus.svg" alt="">
+    </div>
+    <div class="about-clients-carousel-line">
+      <img src="assets/images/products-skills/wall/figma.svg" alt="" data-tone="bright">
+      <img src="assets/images/products-skills/wall/after-effects.svg" alt="">
+      <img src="assets/images/products-skills/wall/photoshop.svg" alt="">
+      <img src="assets/images/products-skills/wall/jianying.svg" alt="">
+      <img src="assets/images/products-skills/wall/figma.svg" alt="" data-tone="bright">
+      <img src="assets/images/products-skills/wall/after-effects.svg" alt="">
+      <img src="assets/images/products-skills/wall/photoshop.svg" alt="">
+      <img src="assets/images/products-skills/wall/jianying.svg" alt="">
+    </div>
+    <div class="about-clients-carousel-line">
+      <img src="assets/images/products-skills/wall/chatgpt.svg" alt="">
+      <img src="assets/images/products-skills/wall/liblib.svg" alt="">
+      <img src="assets/images/products-skills/wall/claude.svg" alt="" data-tone="bright">
+      <img src="assets/images/products-skills/wall/cursor.svg" alt="">
+      <img src="assets/images/products-skills/wall/catpaw.svg" alt="" data-tone="bright">
+      <img src="assets/images/products-skills/wall/chatgpt.svg" alt="">
+      <img src="assets/images/products-skills/wall/liblib.svg" alt="">
+      <img src="assets/images/products-skills/wall/claude.svg" alt="" data-tone="bright">
+      <img src="assets/images/products-skills/wall/cursor.svg" alt="">
+      <img src="assets/images/products-skills/wall/catpaw.svg" alt="" data-tone="bright">
+    </div>
+  </div>
+</section>
+ <div id="about-award" class="section"> <section id="profile" class="about-award-category resume-details" aria-labelledby="profile-title">
+  <div class="about-award-header">
+    <h2 id="profile-title" class="about-award-header-title">个人信息</h2>
+    <div class="about-award-header-number">
+      <svg class="about-award-header-svg" aria-hidden="true" viewBox="0 0 36 37" width="36" height="37" fill="currentColor">
+        <rect id="profile-mark-petal" x="15.2" y="1.5" width="5.6" height="10.5" rx="2.8"></rect>
+        <use href="#profile-mark-petal" transform="rotate(60 18 18.5)"></use>
+        <use href="#profile-mark-petal" transform="rotate(120 18 18.5)"></use>
+        <use href="#profile-mark-petal" transform="rotate(180 18 18.5)"></use>
+        <use href="#profile-mark-petal" transform="rotate(240 18 18.5)"></use>
+        <use href="#profile-mark-petal" transform="rotate(300 18 18.5)"></use>
+      </svg>
+      <p class="about-award-header-text" aria-label="2 组个人信息">02</p>
+    </div>
+  </div>
+  <div class="about-award-item">
+    <div class="about-award-item-wrapper resume-profile">
+      <div class="resume-profile-group">
+        <h3 class="about-award-item-wrapper-text resume-profile-primary">宋新奥</h3>
+        <p class="about-award-item-wrapper-text resume-note">产品设计师 · 北京 / 上海</p>
+      </div>
+      <div class="resume-profile-group">
+        <p class="portfolio-phone resume-profile-primary">17755251071</p>
+        <p class="about-award-item-wrapper-text resume-note">微信 / 电话</p>
+      </div>
+    </div>
+    <div class="about-award-line" aria-hidden="true"></div>
+  </div>
+</section>
+
+<section id="selected-work" class="about-award-category" aria-labelledby="selected-work-title">
+  <div class="about-award-header">
+    <h2 id="selected-work-title" class="about-award-header-title" lang="zh-CN">工作经验</h2>
+    <div class="about-award-header-number">
+      <svg class="about-award-header-svg" aria-hidden="true" viewBox="0 0 36 37" width="36" height="37" fill="currentColor">
+        <g>
+          <path id="selected-work-petal" d="M18 18.5C16.5 14 13.8 8 13.8 4.8a4.2 4.2 0 0 1 8.4 0c0 3.2-2.7 9.2-4.2 13.7Z"></path>
+          <use href="#selected-work-petal" transform="rotate(45 18 18.5)"></use>
+          <use href="#selected-work-petal" transform="rotate(90 18 18.5)"></use>
+          <use href="#selected-work-petal" transform="rotate(135 18 18.5)"></use>
+          <use href="#selected-work-petal" transform="rotate(180 18 18.5)"></use>
+          <use href="#selected-work-petal" transform="rotate(225 18 18.5)"></use>
+          <use href="#selected-work-petal" transform="rotate(270 18 18.5)"></use>
+          <use href="#selected-work-petal" transform="rotate(315 18 18.5)"></use>
+        </g>
+      </svg>
+      <p class="about-award-header-text" aria-label="4 个精选项目">04</p>
+    </div>
+  </div>
+  <div class="about-award-item" lang="zh-CN">
+    <div class="about-award-item-wrapper">
+      <div class="selected-work-company">
+        <p class="about-award-item-wrapper-text">美团外卖</p>
+        <p class="about-award-item-wrapper-text selected-work-date" title="任职时间">2025.07 至今</p>
+      </div>
+      <p class="about-award-item-wrapper-text selected-work-role">产品设计</p>
+      <div class="selected-work-project">
+        <h3 class="about-award-item-wrapper-text">好品感知与选购体验</h3>
+        <p class="selected-work-description">主导好品选购指南设计，帮助用户看懂食材、工艺与产地差异。</p>
+      </div>
+    </div>
+    <div class="about-award-line" aria-hidden="true"></div>
+  </div>
+  <div class="about-award-item" lang="zh-CN">
+    <div class="about-award-item-wrapper">
+      <div class="selected-work-company">
+        <p class="about-award-item-wrapper-text">美团外卖商家端</p>
+        <p class="about-award-item-wrapper-text selected-work-date" title="任职时间">2025.07 至今</p>
+      </div>
+      <p class="about-award-item-wrapper-text selected-work-role">产品设计</p>
+      <div class="selected-work-project">
+        <h3 class="about-award-item-wrapper-text">校园解决方案中心</h3>
+        <p class="selected-work-description">从 0 到 1 负责平台规划与体验设计，借助 AI Coding 完成核心开发，打通提需、交付与评价流程。</p>
+      </div>
+    </div>
+    <div class="about-award-line" aria-hidden="true"></div>
+  </div>
+  <div class="about-award-item" lang="zh-CN">
+    <div class="about-award-item-wrapper">
+      <div class="selected-work-company">
+        <p class="about-award-item-wrapper-text">小米</p>
+        <p class="about-award-item-wrapper-text selected-work-date" title="任职时间">2024.08–2024.10</p>
+      </div>
+      <p class="about-award-item-wrapper-text selected-work-role">UI 设计实习</p>
+      <div class="selected-work-project">
+        <h3 class="about-award-item-wrapper-text">米家万能遥控器 App 视觉升级</h3>
+        <p class="selected-work-description">独立负责视觉升级，优化界面、图标与组件。</p>
+      </div>
+    </div>
+    <div class="about-award-line" aria-hidden="true"></div>
+  </div>
+  <div class="about-award-item" lang="zh-CN">
+    <div class="about-award-item-wrapper">
+      <div class="selected-work-company">
+        <p class="about-award-item-wrapper-text">SHEIN</p>
+        <p class="about-award-item-wrapper-text selected-work-date" title="任职时间">2024.02–2024.04</p>
+      </div>
+      <p class="about-award-item-wrapper-text selected-work-role">UI 设计实习</p>
+      <div class="selected-work-project">
+        <h3 class="about-award-item-wrapper-text">智能客服页体验升级</h3>
+        <p class="selected-work-description">参与客服体验优化，整理设计规范与组件库，支持后续页面迭代。</p>
+      </div>
+    </div>
+    <div class="about-award-line" aria-hidden="true"></div>
+  </div>
+
+</section>
+ <section id="education" class="about-award-category resume-details" lang="zh-CN" aria-labelledby="education-title">
+  <div class="about-award-header">
+    <h2 id="education-title" class="about-award-header-title">教育经历</h2>
+    <div class="about-award-header-number">
+      <svg aria-hidden="true" class="about-award-header-svg" xmlns="http://www.w3.org/2000/svg" width="36" height="37" fill="none" viewBox="0 0 36 37"><path fill="#fff" d="M0 18.277c0-.663.456-1.236 1.092-1.426A22.73 22.73 0 0 0 16.337 1.605C16.527.97 17.1.514 17.764.514h.472c.664 0 1.237.455 1.427 1.091a22.73 22.73 0 0 0 15.245 15.246c.636.19 1.092.763 1.092 1.427v.472c0 .663-.456 1.237-1.092 1.426a22.73 22.73 0 0 0-15.245 15.246c-.19.636-.763 1.092-1.427 1.092h-.472c-.664 0-1.237-.456-1.427-1.092A22.73 22.73 0 0 0 1.092 20.176C.456 19.986 0 19.414 0 18.75v-.473Z"></path></svg>
+      <p class="about-award-header-text" aria-label="1 段教育经历">01</p>
+    </div>
+  </div>
+  <div class="about-award-item">
+    <div class="about-award-item-wrapper resume-education">
+      <h3 class="about-award-item-wrapper-text">合肥大学 · 视觉传达设计 · 本科</h3>
+      <p class="about-award-item-wrapper-text resume-dates">2021–2025</p>
+      <p class="about-award-item-wrapper-text resume-note">曾在小米、SHEIN 设计团队实习，获评荣誉毕业生，曾担任校心理健康协会副会长。</p>
+    </div>
+    <div class="about-award-line" aria-hidden="true"></div>
+  </div>
+</section>
+
+<section id="skills" class="about-award-category resume-details" lang="zh-CN" aria-labelledby="skills-title">
+  <div class="about-award-header">
+    <h2 id="skills-title" class="about-award-header-title">专业技能</h2>
+    <div class="about-award-header-number">
+      <svg aria-hidden="true" class="about-award-header-svg" xmlns="http://www.w3.org/2000/svg" width="36" height="37" fill="none" viewBox="0 0 36 37"><path fill="#fff" fill-rule="evenodd" d="M0 5.07a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0Zm13.5 0a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0Zm18-4.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9ZM0 18.57a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0Zm18-4.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9Zm9 4.5a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0Zm-22.5 9a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9Zm9 4.5a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0Zm18-4.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9Z" clip-rule="evenodd"></path></svg>
+      <p class="about-award-header-text" aria-label="4 类专业技能">04</p>
+    </div>
+  </div>
+  <div class="about-award-item">
+    <ul class="resume-skills">
+      <li class="about-award-item-wrapper">
+        <h3 class="about-award-item-wrapper-text">UX 交互设计</h3>
+        <p class="about-award-item-wrapper-text resume-note">用户研究、交互设计与原型设计</p>
+      </li>
+      <li class="about-award-item-wrapper">
+        <h3 class="about-award-item-wrapper-text">UI 视觉设计</h3>
+        <p class="about-award-item-wrapper-text resume-note">视觉设计、设计规范与组件化</p>
+      </li>
+      <li class="about-award-item-wrapper">
+        <h3 class="about-award-item-wrapper-text">AI 原生工作流</h3>
+        <p class="about-award-item-wrapper-text resume-note">AI Coding、功能验证与应用交付</p>
+      </li>
+      <li class="about-award-item-wrapper">
+        <h3 class="about-award-item-wrapper-text">设计工具</h3>
+        <p class="about-award-item-wrapper-text resume-note">Figma、Photoshop、AI 设计工具</p>
+      </li>
+    </ul>
+    <div class="about-award-line" aria-hidden="true"></div>
+  </div>
+</section>
+<!-- Background lettering: 工作经验 / USER EXPERIENCE / DESIGN PORTFOLIO. -->
+<svg id="about-award-title" viewBox="0 0 1440 1250" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <path d="
+    M79.20 149.65L79.20 64.59C79.20 46.26 79.56 34.52 81.03 25.36L55.73 25.36C57.20 35.26 57.93 46.26 57.93 64.96L57.93 149.65L34.83 149.65C21.63 149.65 14.67 149.29 8.43 148.19L8.43 170.92C15.40 169.82 23.10 169.45 34.83 169.45L55.36 169.45C52.06 183.38 45.46 204.28 39.23 219.68C27.50 248.65 16.13 268.45 0.00 287.88C6.23 294.11 9.17 298.51 13.93 308.04C35.57 276.51 48.40 247.55 59.40 203.18C58.66 218.58 57.93 250.48 57.93 260.75L57.93 319.41C57.93 338.48 57.20 349.84 55.73 360.11L81.40 360.11C79.56 350.58 79.20 338.84 79.20 319.41L79.20 210.15C94.96 229.21 104.86 243.88 116.23 263.68L131.63 247.91C114.03 222.98 102.30 208.32 86.53 192.55C81.76 187.78 81.76 187.78 79.20 185.22L79.20 169.45L93.50 169.45C104.13 169.45 111.83 169.82 119.53 170.92L119.53 148.19C113.29 149.29 104.86 149.65 93.50 149.65ZM211.56 56.16L170.49 56.16C154.36 56.16 145.56 55.42 136.03 53.96L136.03 76.32C145.93 74.86 154.36 74.49 169.76 74.49L211.56 74.49L211.56 100.15L176.73 100.15C160.96 100.15 152.16 99.79 143.36 98.69L143.36 119.59C153.99 118.12 162.43 117.75 176.73 117.75L211.56 117.75L211.56 144.89L164.99 144.89C147.03 144.89 136.76 144.15 127.59 142.69L127.59 165.78C137.86 163.95 147.39 163.58 164.99 163.58L294.42 163.58C311.29 163.58 320.45 163.95 331.08 165.78L331.08 142.69C321.19 144.15 311.29 144.89 294.42 144.89L232.82 144.89L232.82 117.75L274.25 117.75C289.65 117.75 296.62 118.12 308.35 119.22L308.35 98.69C299.19 99.79 290.75 100.15 274.25 100.15L232.82 100.15L232.82 74.49L287.45 74.49C302.85 74.49 312.39 74.86 322.29 76.32L322.29 53.96C312.02 55.79 303.95 56.16 286.72 56.16L232.82 56.16L232.82 55.42C232.82 42.22 233.19 35.99 234.66 26.09L209.36 26.09C210.82 36.36 211.56 42.59 211.56 55.42ZM166.46 296.68L281.22 296.68L281.22 326.38C281.22 334.44 278.65 336.28 268.02 336.28C256.29 336.28 242.72 334.81 228.06 332.24C231.36 340.31 232.82 344.71 234.29 355.34C248.96 356.44 260.69 356.81 272.05 356.81C295.15 356.81 302.85 349.84 302.85 328.58L302.85 223.35C302.85 204.28 303.22 192.92 304.32 184.12C296.99 185.58 287.45 185.95 270.59 185.95L177.83 185.95C163.53 185.95 152.89 185.58 143.73 184.48C144.46 194.02 144.83 199.52 144.83 216.38L144.83 320.51C144.83 340.31 144.09 350.58 142.99 360.11L168.29 360.11C166.83 351.31 166.46 339.58 166.46 320.51ZM166.46 278.35L166.46 250.11L281.22 250.11L281.22 278.35ZM166.46 231.78L166.46 204.65L281.22 204.65L281.22 231.78ZM4.40 59.46C14.30 81.82 19.80 100.52 26.40 132.42L44.36 124.72C37.76 95.75 31.17 73.76 22.37 52.49ZM107.43 50.66C104.13 79.62 99.73 99.79 90.56 124.72L107.06 131.69C116.59 105.65 119.89 93.55 126.49 57.62ZM432.65 286.78C416.88 290.81 397.45 305.11 367.38 334.81L385.72 351.68C391.22 345.44 391.58 344.71 406.25 330.04C421.28 314.64 430.81 308.41 438.88 308.41C442.18 308.41 446.58 310.61 450.61 313.91C461.98 324.91 461.98 324.91 463.81 326.01C468.94 330.04 477.74 334.81 486.54 337.74C502.31 343.61 534.94 346.91 575.27 346.91C627.70 346.91 666.20 346.18 702.87 344.71C705.07 332.61 706.53 327.84 711.30 318.31C679.77 322.34 638.34 324.18 585.91 324.18C547.04 324.18 515.88 322.34 501.58 319.41C485.08 315.74 479.21 312.44 460.88 296.31C458.68 294.48 457.21 293.38 455.38 291.55L455.38 202.08C455.38 185.58 455.75 176.05 456.85 165.05C448.05 166.52 441.45 166.88 429.35 166.88L404.05 166.88C389.75 166.88 383.88 166.52 375.82 165.05L375.82 188.88C384.25 187.42 390.12 187.05 402.58 187.05L432.65 187.05ZM385.35 49.92C411.01 74.12 419.45 84.39 441.45 115.55L460.51 98.69C438.15 70.46 427.15 58.36 402.58 34.89ZM599.47 74.12L599.47 56.89C599.47 44.79 599.84 37.09 601.67 27.19L575.27 27.19C576.74 36.72 577.47 43.32 577.47 56.89L577.47 74.12L530.54 74.12C533.84 68.26 534.94 64.96 538.98 54.32C541.17 47.72 541.91 45.89 543.74 41.86L519.91 36.72C518.08 48.09 514.04 60.19 507.81 73.39C501.21 87.69 493.14 99.42 481.41 111.89C489.84 116.29 493.51 118.85 499.38 125.82C509.64 114.09 514.78 106.75 521.38 95.39L577.47 95.39L577.47 145.25L507.81 145.25C494.98 145.25 484.34 144.52 474.81 143.42L474.81 167.98C485.44 166.88 496.08 166.15 508.54 166.15L546.31 166.15C543.01 195.48 536.78 212.72 521.74 232.15C507.81 249.75 492.78 261.11 466.01 273.95C470.78 278.35 472.98 281.28 477.74 288.61C479.21 290.45 479.21 290.45 479.94 291.55C510.38 275.78 527.24 261.85 542.64 240.58C558.41 218.58 565.01 198.78 567.94 166.15L601.67 166.15L601.67 269.91C601.67 286.05 612.67 290.81 648.60 290.81C668.77 290.81 681.24 288.25 688.20 282.38C695.53 276.51 698.10 267.35 699.93 242.78C700.30 236.55 700.67 232.15 701.77 223.35C692.97 221.88 688.57 220.05 679.40 215.28C678.67 242.78 676.84 257.45 673.54 263.31C672.80 263.68 672.80 264.05 672.07 264.41C668.40 268.08 665.10 268.81 649.34 268.81C629.54 268.81 622.57 265.88 622.57 257.45L622.57 166.15L668.77 166.15C680.14 166.15 689.67 166.52 699.93 167.98L699.93 143.42C688.57 144.89 680.14 145.25 668.40 145.25L599.47 145.25L599.47 95.39L647.50 95.39C661.80 95.39 671.34 95.75 682.70 96.85L682.70 72.29C674.64 73.76 666.20 74.12 647.50 74.12ZM953.29 104.55L1039.45 104.55C1054.85 104.55 1063.65 104.92 1072.82 106.39L1072.82 81.46C1062.18 83.29 1054.12 83.66 1039.45 83.66L923.22 83.66C927.62 73.02 930.56 66.06 935.69 51.02C938.99 41.49 940.09 38.56 943.02 32.32L917.36 23.89C916.26 36.36 910.76 54.32 901.96 75.96C885.46 115.55 865.66 145.99 837.06 176.42C847.69 183.75 848.06 184.12 855.39 194.02C879.59 165.42 896.46 139.39 913.69 104.55L929.82 104.55L929.82 321.24C929.82 340.68 929.09 350.94 927.62 359.74L955.86 359.74C954.02 350.58 953.29 339.21 953.29 321.24L953.29 265.15L1028.82 265.15C1041.65 265.15 1051.18 265.88 1061.08 267.35L1061.08 242.05C1050.82 243.51 1042.02 244.25 1028.82 244.25L953.29 244.25L953.29 184.85L1027.72 184.85C1040.19 184.85 1048.62 185.58 1059.98 187.05L1059.98 161.75C1049.72 163.22 1041.29 163.95 1027.72 163.95L953.29 163.95ZM831.93 23.89C829.73 38.19 824.96 53.96 816.53 73.02C797.10 117.39 771.43 153.69 739.17 183.02C747.60 191.45 747.60 191.45 754.57 202.45C775.83 180.82 787.20 166.15 800.03 144.52C798.93 166.15 798.56 176.05 798.56 191.82L798.56 313.54C798.56 331.14 797.83 343.98 796.00 358.28L824.60 358.28C822.76 346.18 822.03 330.78 822.03 314.28L822.03 113.72C835.96 86.22 840.73 75.59 849.16 52.86C852.09 45.52 853.19 42.22 857.59 32.32ZM1183.18 130.59C1183.18 143.05 1182.81 152.59 1181.71 162.48C1191.61 161.38 1202.98 161.02 1220.58 161.02L1345.60 161.02C1363.57 161.02 1373.84 161.38 1384.10 162.48C1383.00 153.69 1382.64 144.15 1382.64 130.22L1382.64 68.26C1382.64 55.06 1383.00 47.36 1384.10 37.82C1374.20 39.29 1363.94 39.66 1342.67 39.66L1222.78 39.66C1203.34 39.66 1193.08 39.29 1181.71 37.82C1182.81 47.36 1183.18 56.16 1183.18 68.62ZM1206.28 60.56L1359.17 60.56L1359.17 140.12L1206.28 140.12ZM1130.38 321.61C1130.38 340.31 1130.01 350.21 1128.55 359.74L1153.11 359.74L1153.11 336.64L1238.18 336.64L1238.18 352.78L1262.01 352.78C1260.91 343.98 1260.54 334.81 1260.54 316.84L1260.54 232.15C1260.54 211.62 1260.91 205.38 1261.64 197.68C1252.11 198.42 1243.68 198.78 1231.94 198.78L1162.65 198.78C1148.35 198.78 1139.55 198.42 1128.91 197.32C1130.01 208.32 1130.38 218.58 1130.38 232.88ZM1153.11 219.32L1238.18 219.32L1238.18 316.11L1153.11 316.11ZM1296.84 323.81C1296.84 340.68 1296.47 350.21 1295.37 359.74L1319.21 359.74L1319.21 336.64L1413.07 336.64L1413.07 359.74L1438.00 359.74C1436.53 350.58 1436.17 341.41 1436.17 321.61L1436.17 233.25C1436.17 217.85 1436.53 206.85 1437.63 197.32C1428.83 198.42 1420.03 198.78 1406.10 198.78L1325.44 198.78C1312.97 198.78 1304.91 198.42 1295.74 197.68C1296.84 206.48 1296.84 211.98 1296.84 229.21ZM1319.21 219.32L1413.43 219.32L1413.43 316.11L1319.21 316.11Z
+    M54.1797 431.9531L75.0391 431.9531L75.0391 529.4531Q75.0391 582.1875 118.0469 582.1875Q161.5234 582.1875 161.5234 529.4531L161.5234 431.9531L182.3828 431.9531L182.3828 528.2812Q182.3828 564.2578 165.9766 582.8320Q149.5703 601.4062 118.0469 601.4062Q86.5234 601.4062 70.3516 582.8320Q54.1797 564.2578 54.1797 528.2812ZM207.6953 545.0391L228.3203 545.0391Q229.4922 562.0312 241.9727 572.2266Q254.4531 582.4219 273.6719 582.4219Q291.0156 582.4219 301.6797 574.9219Q312.3438 567.4219 312.3438 553.9453Q312.3438 550.0781 311.4649 546.8555Q310.5860 543.6328 308.6524 541.1133Q306.7188 538.5938 304.5508 536.6016Q302.3828 534.6094 298.8086 532.9688Q295.2344 531.3281 292.1289 530.1562Q289.0235 528.9844 284.1602 527.8711Q279.2969 526.7578 275.6055 526.0547Q271.9141 525.3516 266.2891 524.4141Q257.0313 522.8906 250.0586 521.0156Q243.0859 519.1406 235.4102 515.6250Q227.7344 512.1094 222.7539 507.4219Q217.7734 502.7344 214.5508 495.2930Q211.3281 487.8516 211.3281 478.3594Q211.3281 456.9141 227.2070 443.6133Q243.0859 430.3125 268.6328 430.3125Q295.3516 430.3125 312.2852 444.5508Q329.2188 458.7891 330.6250 481.6406L309.8828 481.6406Q308.1250 466.9922 296.8750 458.1445Q285.6250 449.2969 268.6328 449.2969Q251.9922 449.2969 242.0899 456.5625Q232.1875 463.8281 232.1875 477.0703Q232.1875 481.2891 233.4766 484.8047Q234.7656 488.3203 236.6992 490.7812Q238.6328 493.2422 242.2656 495.4102Q245.8984 497.5781 249.1211 498.9258Q252.3438 500.2734 257.7930 501.6211Q263.2422 502.9688 267.2266 503.7305Q271.2110 504.4922 277.7735 505.6641Q287.0313 507.1875 294.1211 509.0625Q301.2110 510.9375 308.9453 514.5117Q316.6797 518.0859 321.6602 522.8320Q326.6406 527.5781 329.9219 535.0195Q333.2031 542.4609 333.2031 551.9531Q333.2031 573.7500 316.5625 587.5781Q299.9219 601.4062 273.4375 601.4062Q243.7891 601.4062 226.2109 585.8789Q208.6328 570.3516 207.6953 545.0391ZM359.5703 431.9531L466.6797 431.9531L466.6797 451.1719L380.4297 451.1719L380.4297 504.9609L452.2656 504.9609L452.2656 524.1797L380.4297 524.1797L380.4297 580.7812L469.7266 580.7812L469.7266 600.0000L359.5703 600.0000ZM493.1641 431.9531L557.5000 431.9531Q582.8125 431.9531 598.1055 446.0156Q613.3985 460.0781 613.3985 483.6328Q613.3985 501.2109 603.6719 513.9844Q593.9453 526.7578 577.6563 531.3281L615.3906 600.0000L591.8360 600.0000L557.0313 535.4297L514.0235 535.4297L514.0235 600.0000L493.1641 600.0000ZM514.0235 451.1719L514.0235 516.2109L555.8594 516.2109Q572.3828 516.2109 582.2266 507.3047Q592.0703 498.3984 592.0703 483.6328Q592.0703 468.8672 582.2852 460.0195Q572.5000 451.1719 556.0938 451.1719Z
+    M-32.0703 647.9531L75.0391 647.9531L75.0391 667.1719L-11.2109 667.1719L-11.2109 720.9609L60.6250 720.9609L60.6250 740.1797L-11.2109 740.1797L-11.2109 796.7812L78.0859 796.7812L78.0859 816.0000L-32.0703 816.0000ZM149.3359 730.1016L95.7813 647.9531L120.2734 647.9531L162.8125 713.2266L205.7031 647.9531L228.3203 647.9531L174.7656 730.1016L231.8359 816.0000L207.1094 816.0000L161.0547 746.8594L114.7656 816.0000L92.1484 816.0000ZM255.0391 647.9531L319.6094 647.9531Q344.9219 647.9531 360.0977 662.0156Q375.2735 676.0781 375.2735 699.6328Q375.2735 723.1875 360.0391 737.3086Q344.8047 751.4297 319.6094 751.4297L275.8985 751.4297L275.8985 816.0000L255.0391 816.0000ZM275.8985 667.1719L275.8985 732.2109L317.7344 732.2109Q334.2578 732.2109 344.1016 723.3633Q353.9453 714.5156 353.9453 699.6328Q353.9453 684.7500 344.2188 675.9609Q334.4922 667.1719 317.9688 667.1719ZM397.5391 647.9531L504.6485 647.9531L504.6485 667.1719L418.3985 667.1719L418.3985 720.9609L490.2344 720.9609L490.2344 740.1797L418.3985 740.1797L418.3985 796.7812L507.6953 796.7812L507.6953 816.0000L397.5391 816.0000ZM531.1328 647.9531L595.4688 647.9531Q620.7813 647.9531 636.0742 662.0156Q651.3672 676.0781 651.3672 699.6328Q651.3672 717.2109 641.6406 729.9844Q631.9141 742.7578 615.6250 747.3281L653.3594 816.0000L629.8047 816.0000L595.0000 751.4297L551.9922 751.4297L551.9922 816.0000L531.1328 816.0000ZM551.9922 667.1719L551.9922 732.2109L593.8281 732.2109Q610.3516 732.2109 620.1953 723.3047Q630.0391 714.3984 630.0391 699.6328Q630.0391 684.8672 620.2539 676.0195Q610.4688 667.1719 594.0625 667.1719ZM677.7344 647.9531L698.5938 647.9531L698.5938 816.0000L677.7344 816.0000ZM731.1719 647.9531L838.2813 647.9531L838.2813 667.1719L752.0313 667.1719L752.0313 720.9609L823.8672 720.9609L823.8672 740.1797L752.0313 740.1797L752.0313 796.7812L841.3281 796.7812L841.3281 816.0000L731.1719 816.0000ZM864.7656 816.0000L864.7656 647.9531L883.9844 647.9531L974.2188 777.5625L974.2188 647.9531L994.6094 647.9531L994.6094 816.0000L975.3906 816.0000L885.1563 686.3906L885.1563 816.0000ZM1020.9766 731.9766Q1020.9766 693.6562 1042.8906 670.1016Q1064.8047 646.5469 1101.1328 646.5469Q1129.0234 646.5469 1147.8906 661.6641Q1166.7578 676.7812 1171.4453 702.9141L1150.5859 702.9141Q1145.8984 685.3359 1132.5977 675.5508Q1119.2969 665.7656 1100.1953 665.7656Q1073.9453 665.7656 1058.1250 684.1641Q1042.3047 702.5625 1042.3047 731.9766Q1042.3047 761.2734 1058.1250 779.7305Q1073.9453 798.1875 1100.1953 798.1875Q1119.5313 798.1875 1132.5977 788.4609Q1145.6641 778.7344 1150.3516 761.0391L1171.2109 761.0391Q1166.5234 787.1719 1147.8320 802.2891Q1129.1406 817.4062 1101.1328 817.4062Q1064.6875 817.4062 1042.8320 793.9688Q1020.9766 770.5312 1020.9766 731.9766ZM1197.5781 647.9531L1304.6875 647.9531L1304.6875 667.1719L1218.4375 667.1719L1218.4375 720.9609L1290.2734 720.9609L1290.2734 740.1797L1218.4375 740.1797L1218.4375 796.7812L1307.7344 796.7812L1307.7344 816.0000L1197.5781 816.0000Z
+    M641.2753 1032.0000L671.0409 863.9531L713.5800 863.9531Q748.9706 863.9531 769.8886 883.5820Q790.8066 903.2109 790.8066 935.5547Q790.8066 956.1797 783.8339 973.8750Q776.8612 991.5703 764.2636 1004.4609Q751.6659 1017.3516 732.9159 1024.6758Q714.1659 1032.0000 691.6659 1032.0000ZM665.5331 1012.7812L693.3066 1012.7812Q727.9941 1012.7812 748.8534 991.5117Q769.7128 970.2422 769.7128 936.0234Q769.7128 909.8906 754.4198 896.5312Q739.1269 883.1719 712.0566 883.1719L688.2675 883.1719ZM830.5331 863.9531L936.3534 863.9531L932.7206 883.1719L847.7597 883.1719L838.5019 936.9609L909.0487 936.9609L905.6503 956.1797L835.1034 956.1797L825.0253 1012.7812L913.1503 1012.7812L909.7519 1032.0000L800.7675 1032.0000ZM937.0566 977.0391L957.4472 977.0391Q957.7987 989.4609 963.4823 998.0742Q969.1659 1006.6875 978.0136 1010.5547Q986.8612 1014.4219 998.2284 1014.4219Q1017.6816 1014.4219 1029.2245 1006.6289Q1040.7675 998.8359 1040.7675 983.7188Q1040.7675 979.1484 1038.8925 975.3398Q1037.0175 971.5312 1033.8534 968.7773Q1030.6894 966.0234 1025.6503 963.6211Q1020.6112 961.2188 1015.2792 959.5781Q1009.9472 957.9375 1002.7987 956.1797Q994.0097 954.0703 986.9198 951.6680Q979.8300 949.2656 973.0331 945.5156Q966.2362 941.7656 961.7245 937.2539Q957.2128 932.7422 954.4589 926.2969Q951.7050 919.8516 951.7050 912.2344Q951.7050 896.0625 959.9667 884.5781Q968.2284 873.0938 982.1737 867.7031Q996.1191 862.3125 1014.2831 862.3125Q1040.7675 862.3125 1055.8847 876.0820Q1071.0019 889.8516 1071.0019 912.0000L1050.4941 912.0000Q1050.1425 898.1719 1039.7714 889.7344Q1029.4003 881.2969 1012.8769 881.2969Q994.3612 881.2969 983.4628 888.9141Q972.5644 896.5312 972.5644 911.0625Q972.5644 916.5703 975.2597 920.8477Q977.9550 925.1250 983.3456 928.2305Q988.7362 931.3359 994.9472 933.5039Q1001.1581 935.6719 1010.1816 937.8984Q1018.9706 940.0078 1026.0019 942.4102Q1033.0331 944.8125 1039.9472 948.5625Q1046.8612 952.3125 1051.4902 956.8242Q1056.1191 961.3359 1058.9902 967.7812Q1061.8612 974.2266 1061.8612 981.8438Q1061.8612 1006.4531 1044.5761 1019.9297Q1027.2909 1033.4062 998.6972 1033.4062Q969.1659 1033.4062 953.1112 1018.4062Q937.0566 1003.4062 937.0566 977.0391ZM1108.8534 863.9531L1129.7128 863.9531L1099.9472 1032.0000L1079.0878 1032.0000ZM1232.8378 862.5469Q1261.5487 862.5469 1278.9511 877.8398Q1296.3534 893.1328 1296.4706 918.6797L1276.5487 918.6797Q1274.7909 900.9844 1262.6034 891.3750Q1250.4159 881.7656 1231.4316 881.7656Q1215.6112 881.7656 1202.2519 888.3867Q1188.8925 895.0078 1180.0448 906.1992Q1171.1972 917.3906 1166.2753 932.0391Q1161.3534 946.6875 1161.3534 962.8594Q1161.3534 985.3594 1174.7128 999.7734Q1188.0722 1014.1875 1210.1034 1014.1875Q1233.7753 1014.1875 1250.3573 1001.1211Q1266.9394 988.0547 1270.5722 966.2578L1271.5097 960.2812L1221.1191 960.2812L1224.4003 941.0625L1295.2987 941.0625L1279.1269 1032.0000L1261.4316 1032.0000L1263.5409 1008.2109Q1259.3222 1013.3672 1254.8105 1017.4102Q1250.2987 1021.4531 1243.7948 1025.3203Q1237.2909 1029.1875 1228.5019 1031.2969Q1219.7128 1033.4062 1209.2831 1033.4062Q1188.4237 1033.4062 1172.6034 1024.2070Q1156.7831 1015.0078 1148.4042 999.0117Q1140.0253 983.0156 1140.0253 962.6250Q1140.0253 942.1172 1146.5878 923.8945Q1153.1503 905.6719 1164.9277 892.0781Q1176.7050 878.4844 1194.3417 870.5156Q1211.9784 862.5469 1232.8378 862.5469ZM1341.2362 863.9531L1358.2284 863.9531L1426.9003 996.0234L1450.6894 863.9531L1471.0800 863.9531L1441.3144 1032.0000L1422.3300 1032.0000L1354.9472 902.3906L1331.8612 1032.0000L1311.4706 1032.0000Z
+    M222.9072 1079.9531L287.4775 1079.9531Q312.7900 1079.9531 327.9658 1094.0156Q343.1416 1108.0781 343.1416 1131.6328Q343.1416 1155.1875 327.9072 1169.3086Q312.6728 1183.4297 287.4775 1183.4297L243.7666 1183.4297L243.7666 1248.0000L222.9072 1248.0000ZM243.7666 1099.1719L243.7666 1164.2109L285.6025 1164.2109Q302.1259 1164.2109 311.9697 1155.3633Q321.8134 1146.5156 321.8134 1131.6328Q321.8134 1116.7500 312.0869 1107.9609Q302.3603 1099.1719 285.8369 1099.1719ZM509.3134 1120.0312Q519.5087 1139.4844 519.5087 1163.9766Q519.5087 1188.4688 509.3720 1207.9219Q499.2353 1227.3750 480.9541 1238.3906Q462.6728 1249.4062 439.3525 1249.4062Q416.0322 1249.4062 397.7509 1238.3906Q379.4697 1227.3750 369.3330 1207.9219Q359.1962 1188.4688 359.1962 1163.9766Q359.1962 1139.4844 369.3330 1120.0312Q379.4697 1100.5781 397.7509 1089.5625Q416.0322 1078.5469 439.3525 1078.5469Q462.6728 1078.5469 480.9541 1089.5625Q499.2353 1100.5781 509.3134 1120.0312ZM396.8134 1116.2812Q380.5244 1134.7969 380.5244 1163.9766Q380.5244 1193.1562 396.8720 1211.6719Q413.2197 1230.1875 439.3525 1230.1875Q465.4853 1230.1875 481.8330 1211.6719Q498.1806 1193.1562 498.1806 1163.9766Q498.1806 1134.7969 481.8330 1116.2812Q465.4853 1097.7656 439.3525 1097.7656Q413.2197 1097.7656 396.8134 1116.2812ZM545.8759 1079.9531L610.2119 1079.9531Q635.5244 1079.9531 650.8173 1094.0156Q666.1103 1108.0781 666.1103 1131.6328Q666.1103 1149.2109 656.3837 1161.9844Q646.6572 1174.7578 630.3681 1179.3281L668.1025 1248.0000L644.5478 1248.0000L609.7431 1183.4297L566.7353 1183.4297L566.7353 1248.0000L545.8759 1248.0000ZM566.7353 1099.1719L566.7353 1164.2109L608.5712 1164.2109Q625.0947 1164.2109 634.9384 1155.3047Q644.7822 1146.3984 644.7822 1131.6328Q644.7822 1116.8672 634.9970 1108.0195Q625.2119 1099.1719 608.8056 1099.1719ZM673.0244 1079.9531L802.8681 1079.9531L802.8681 1099.1719L748.3759 1099.1719L748.3759 1248.0000L727.5166 1248.0000L727.5166 1099.1719L673.0244 1099.1719ZM825.1337 1079.9531L929.5478 1079.9531L929.5478 1099.1719L845.9931 1099.1719L845.9931 1155.3047L915.1337 1155.3047L915.1337 1174.5234L845.9931 1174.5234L845.9931 1248.0000L825.1337 1248.0000ZM1089.0400 1120.0312Q1099.2353 1139.4844 1099.2353 1163.9766Q1099.2353 1188.4688 1089.0986 1207.9219Q1078.9619 1227.3750 1060.6806 1238.3906Q1042.3994 1249.4062 1019.0791 1249.4062Q995.7587 1249.4062 977.4775 1238.3906Q959.1962 1227.3750 949.0595 1207.9219Q938.9228 1188.4688 938.9228 1163.9766Q938.9228 1139.4844 949.0595 1120.0312Q959.1962 1100.5781 977.4775 1089.5625Q995.7587 1078.5469 1019.0791 1078.5469Q1042.3994 1078.5469 1060.6806 1089.5625Q1078.9619 1100.5781 1089.0400 1120.0312ZM976.5400 1116.2812Q960.2509 1134.7969 960.2509 1163.9766Q960.2509 1193.1562 976.5986 1211.6719Q992.9462 1230.1875 1019.0791 1230.1875Q1045.2119 1230.1875 1061.5595 1211.6719Q1077.9072 1193.1562 1077.9072 1163.9766Q1077.9072 1134.7969 1061.5595 1116.2812Q1045.2119 1097.7656 1019.0791 1097.7656Q992.9462 1097.7656 976.5400 1116.2812ZM1125.6025 1248.0000L1125.6025 1079.9531L1146.4619 1079.9531L1146.4619 1228.7812L1223.1025 1228.7812L1223.1025 1248.0000ZM1245.2509 1079.9531L1266.1103 1079.9531L1266.1103 1248.0000L1245.2509 1248.0000ZM1442.5947 1120.0312Q1452.7900 1139.4844 1452.7900 1163.9766Q1452.7900 1188.4688 1442.6533 1207.9219Q1432.5166 1227.3750 1414.2353 1238.3906Q1395.9541 1249.4062 1372.6337 1249.4062Q1349.3134 1249.4062 1331.0322 1238.3906Q1312.7509 1227.3750 1302.6142 1207.9219Q1292.4775 1188.4688 1292.4775 1163.9766Q1292.4775 1139.4844 1302.6142 1120.0312Q1312.7509 1100.5781 1331.0322 1089.5625Q1349.3134 1078.5469 1372.6337 1078.5469Q1395.9541 1078.5469 1414.2353 1089.5625Q1432.5166 1100.5781 1442.5947 1120.0312ZM1330.0947 1116.2812Q1313.8056 1134.7969 1313.8056 1163.9766Q1313.8056 1193.1562 1330.1533 1211.6719Q1346.5009 1230.1875 1372.6337 1230.1875Q1398.7666 1230.1875 1415.1142 1211.6719Q1431.4619 1193.1562 1431.4619 1163.9766Q1431.4619 1134.7969 1415.1142 1116.2812Q1398.7666 1097.7656 1372.6337 1097.7656Q1346.5009 1097.7656 1330.0947 1116.2812Z
+  "></path>
+</svg>
+</div> <section id="about-capability" class="section" data-case-studies aria-labelledby="about-capability-title" lang="zh-CN">
+  <div id="about-capability-title" role="heading" aria-level="2" aria-label="产品设计项目展示">
+    <div id="about-capability-title-line-1">产品设计</div>
+    <div id="about-capability-title-line-2">项目展示</div>
+  </div>
+  <div id="about-capability-subheader">
+    <div id="about-capability-subheader-text" lang="en">
+      <div class="case-section-label">Selected Case Studies</div>
+      <div class="case-section-description">Helping shoppers make informed choices and campus teams manage requests from submission to delivery.</div>
+    </div>
+  </div>
+  <div id="about-capability-cards-wrapper">
+    <div id="about-capability-cards">
+      <div class="about-capability-card">
+        <div class="about-capability-card-back" aria-hidden="true"></div>
+        <button type="button" class="about-capability-card-front case-card" aria-haspopup="dialog" aria-controls="case-good-products" aria-labelledby="case-good-products-name case-good-products-action">
+          <span class="case-card-brand">好品选购</span>
+          <img class="case-card-mark" src="/about/assets/images/case-studies/figma-good-products-mark.svg" alt="">
+          <span class="case-card-artwork">
+            <img src="/about/assets/images/case-studies/figma-good-products.png" width="1104" height="1425" alt="两台手机展示牛排照片和食材部位说明" decoding="async">
+          </span>
+          <span id="case-good-products-name" class="case-card-name">好品感知与选购体验</span>
+          <span class="case-card-description">美团外卖·消费端产品设计</span>
+          <span class="case-card-footer">
+            <span id="case-good-products-action" class="case-card-action">查看案例</span>
+            <span class="case-card-icon" aria-hidden="true">
+              <img src="/about/assets/images/case-studies/figma-good-products-action.svg" alt="">
+              <img class="case-card-arrow" src="/about/assets/images/case-studies/figma-good-products-arrow.svg" alt="">
+            </span>
+          </span>
+        </button>
+      </div>
+      <div class="about-capability-card">
+        <div class="about-capability-card-back" aria-hidden="true"></div>
+        <button type="button" class="about-capability-card-front case-card case-card--campus" aria-haspopup="dialog" aria-controls="case-campus" aria-labelledby="case-campus-name case-campus-action">
+          <span class="case-card-brand">校园平台</span>
+          <img class="case-card-mark" src="/about/assets/images/case-studies/figma-campus-mark.svg" alt="">
+          <span class="case-card-artwork">
+            <img src="/about/assets/images/case-studies/figma-campus-platform.png" width="1672" height="941" alt="笔记本电脑展示校园解决方案平台的需求提交首页" decoding="async">
+          </span>
+          <span id="case-campus-name" class="case-card-name">方案中心</span>
+          <span class="case-card-description">需求承接·设计开发全流程</span>
+          <span class="case-card-footer">
+            <span id="case-campus-action" class="case-card-action">查看案例</span>
+            <span class="case-card-icon" aria-hidden="true">
+              <img src="/about/assets/images/case-studies/figma-campus-action.svg" alt="">
+              <img class="case-card-arrow" src="/about/assets/images/case-studies/figma-campus-arrow.svg" alt="">
+            </span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <dialog id="case-good-products" class="case-dialog" aria-labelledby="case-good-products-title">
+    <div class="case-dialog-heading">
+      <h2 id="case-good-products-title">好品感知与选购体验</h2>
+      <form method="dialog"><button type="submit" class="case-dismiss" autofocus>关闭</button></form>
+    </div>
+    <p class="case-role">美团外卖 · 神抢手 · 产品设计</p>
+    <h3>用户需要什么</h3>
+    <p>用户能从商品图看到菜品外观，但还需要理解食材、工艺和产地的差异，才能判断值不值得买。</p>
+    <h3>我做了什么</h3>
+    <p>主导选购指南设计，用尺寸对比、部位标注和产地地图解释商品差异。同时搭建 ComfyUI 生图工作流，减少重复找图和制图。</p>
+    <h3>项目结果</h3>
+    <p>每批 30 张指南的素材制作工时由 5 人日降到 1 人日，减少约 80%。</p>
+  </dialog>
+
+  <dialog id="case-campus" class="case-dialog" aria-labelledby="case-campus-title">
+    <div class="case-dialog-heading">
+      <h2 id="case-campus-title">校园解决方案中心</h2>
+      <form method="dialog"><button type="submit" class="case-dismiss" autofocus>关闭</button></form>
+    </div>
+    <p class="case-role">美团外卖 · 商家端 · 产品设计工程师</p>
+    <h3>项目目标</h3>
+    <p>让学校提交需求后，能在同一个平台追踪专家承接、方案交付与评价。</p>
+    <h3>我做了什么</h3>
+    <p>负责从 0 到 1 的产品规划与体验设计。保留大象作为日常沟通工具，提交后自动建群并同步需求。借助 AI Coding 完成核心开发，验证通知、交付与评价流程。</p>
+    <h3>项目结果</h3>
+    <p>平台累计承接 1,000+ 项需求，覆盖百余所高校及园区。</p>
+  </dialog>
+
+  <script>
+    document.querySelectorAll("#about-capability .case-card").forEach(card => {
+      const dialog = document.getElementById(card.getAttribute("aria-controls"));
+      card.addEventListener("click", () => dialog.showModal());
+      for (const eventName of ["wheel", "mousewheel", "touchstart", "touchmove", "touchend", "keydown"]) {
+        dialog.addEventListener(eventName, event => event.stopPropagation());
+      }
+    });
+  </script>
+</section> </div> </div> <div id="page-extra-sections"> <div id="end-section" class="section"> <div id="end-section-outer"> <div id="end-section-inner"> <div id="end-section-content"> <div id="end-section-content-crosses"> <div class="end-section-content-cross"></div> <div class="end-section-content-cross"></div> <div class="end-section-content-cross"></div> <div class="end-section-content-cross"></div> <div class="end-section-content-cross"></div> </div> <div id="end-section-subtitle"> <div id="end-section-subtitle-text" lang="en">Song Xin’ao · Product Designer</div> </div> <div id="end-section-title"> <div id="end-section-title-link" role="heading" aria-level="2" aria-label="感谢浏览" lang="zh-CN">感谢浏览</div> <span id="end-section-title-top-decoration"></span> <span id="end-section-title-bottom-left-decoration"></span> <span id="end-section-title-bottom-right-decoration"></span> </div> </div> </div> </div> </div>   </div> </div> </div> <div id="scroll-indicator"> <div id="scroll-indicator-bar"></div> </div> <div id="input-blocker"></div> <div id="video-overlay"> <div id="video-overlay__vimeo-video"></div> <div id="video-overlay__mobile-close-btn"> <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M3.75781 3.75732L12.2431 12.2426" stroke="white" stroke-width="2" stroke-linecap="round"></path> <path d="M12.2422 3.75732L3.75691 12.2426" stroke="white" stroke-width="2" stroke-linecap="round"></path> </svg> </div> <div id="video-overlay__controls"> <button id="video-overlay__play-btn">PLAY</button> <div id="video-overlay__progress-container"> <div id="video-overlay__progress-active"></div> <div id="video-overlay__progress-bg"></div> </div> <button id="video-overlay__mute-btn">MUTE</button> </div> <div id="video-overlay-cursor"> <svg id="video-overlay-cursor-svg" xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none" viewBox="0 0 36 36"><path stroke="#020022" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M31 31 17.928 18 31 5M5 5l13.072 13L5 31"></path></svg> </div> </div> <canvas id="transition-overlay" style="display: none"></canvas>
+</body></html>
