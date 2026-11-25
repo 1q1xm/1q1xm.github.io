@@ -858,7 +858,6 @@
     }
     headlineOutline.hidden = lighting !== "spectrum" && lighting !== "soft";
     layout();
-    cover.toggleAttribute("data-cover-ready", Boolean(renderer));
   }
 
   art.addEventListener("pointerdown", event => {
@@ -919,10 +918,6 @@
     event.preventDefault();
     renderer = null;
     roomCanvas.hidden = true;
-    cover.removeAttribute("data-cover-ready");
-    glassTools.hidden = true;
-    for (const control of controls) control.hidden = true;
-    art.removeAttribute("tabindex");
   });
   canvas.addEventListener("webglcontextrestored", startRenderer);
   addEventListener("resize", layout, { passive: true });
@@ -935,6 +930,7 @@
     new Promise(resolve => setTimeout(resolve, 1300))
   ]).then(() => {
     startRenderer();
+    cover.dataset.coverReady = "";
     requestAnimationFrame(tick);
   });
   layout();

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN" data-portfolio-silent class="no-js is-black-bg"> <head><meta charset="utf-8"><title>宋新奥 · 设计作品集</title>
+<!DOCTYPE html><html lang="zh-CN" data-portfolio-silent class="no-js is-black-bg about-starting"> <head><title>宋新奥 · 设计作品集</title>
 <script>
   if (location.protocol === "file:") {
     const preview = new URL("http://127.0.0.1:8768/about/");
@@ -7,127 +7,80 @@
     location.replace(preview.href);
   }
 </script>
-<script>
-  (() => {
-    const root = document.documentElement;
-    function setMenu(menuButton, menu, open) {
-      const header = document.getElementById("header");
-      menu.inert = !open;
-      menu.classList.toggle("--opened", open);
-      header.classList.toggle("--menu-opened", open);
-      menuButton.setAttribute("aria-expanded", String(open));
-      menuButton.setAttribute("aria-label", open ? "关闭导航" : "导航");
-    }
-
-    document.addEventListener("click", event => {
-      if (root.classList.contains("portfolio-enhanced")) return;
-      const menu = document.getElementById("header-menu");
-      const menuButton = document.getElementById("header-right-menu-btn");
-      if (!menu || !menuButton || !(event.target instanceof Element)) return;
-      const control = event.target.closest("#header-right-menu-btn, [data-scroll-to]");
-      if (control === menuButton) {
-        event.stopPropagation();
-        setMenu(menuButton, menu, menu.inert);
-      } else if (control?.dataset.scrollTo) {
-        event.stopPropagation();
-        const target = control.dataset.scrollTo;
-        setMenu(menuButton, menu, false);
-        if (menu.contains(control)) menuButton.focus({ preventScroll: true });
-        const section = document.getElementById(target);
-        if (section) {
-          section.scrollIntoView();
-        } else if (document.readyState === "loading") {
-          document.addEventListener("DOMContentLoaded", () => {
-            document.getElementById(target)?.scrollIntoView();
-          }, { once: true });
-        }
-      } else if (!menu.inert && !menu.contains(event.target)) {
-        setMenu(menuButton, menu, false);
-      }
-    }, true);
-    document.addEventListener("keydown", event => {
-      const menu = document.getElementById("header-menu");
-      if (event.key === "Escape" && menu && !menu.inert && !root.classList.contains("portfolio-enhanced")) {
-        const menuButton = document.getElementById("header-right-menu-btn");
-        event.stopPropagation();
-        setMenu(menuButton, menu, false);
-        menuButton.focus();
-      }
-    }, true);
-
-    document.addEventListener("DOMContentLoaded", () => requestAnimationFrame(() => requestAnimationFrame(() => {
-      const enhance = () => import("/about/_astro/hoisted.CUO_IjfL.js?v=progressive-portfolio")
-        .catch(error => console.warn("Portfolio effects could not start", error));
-      if ("requestIdleCallback" in window) {
-        requestIdleCallback(enhance, { timeout: 1200 });
-      } else {
-        setTimeout(enhance, 0);
-      }
-    })), { once: true });
-  })();
-</script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><base href="/about/"><meta name="description" content="宋新奥的产品与 UX 设计作品集，包含消费选购体验、商家端工具和界面设计项目。"><link id="apple-touch-icon" rel="apple-touch-icon" sizes="180x180" href="./assets/meta/apple-touch-icon.png"><link id="icon32" rel="icon" type="image/png" sizes="32x32" href="./assets/meta/favicon-32x32.png" media="(prefers-color-scheme: light)"><link id="icon32" rel="icon" type="image/png" sizes="32x32" href="./assets/meta/dark/favicon-32x32.png" media="(prefers-color-scheme: dark)"><link id="icon64" rel="icon" type="image/png" sizes="16x16" href="./assets/meta/favicon-16x16.png" media="(prefers-color-scheme: light)"><link id="icon64" rel="icon" type="image/png" sizes="16x16" href="./assets/meta/dark/favicon-16x16.png" media="(prefers-color-scheme: dark)"><link href="./assets/meta/favicon.ico" rel="shortcut icon" media="(prefers-color-scheme: light)"><link href="./assets/meta/dark/favicon.ico" rel="shortcut icon" media="(prefers-color-scheme: dark)"><link id="manifest" rel="manifest" href="./assets/meta/site.webmanifest"><link rel="mask-icon" href="./assets/meta/safari-pinned-tab.svg" color="#000000"><meta name="msapplication-TileColor" content="#ffffff"><meta name="theme-color" content="#ffffff"><meta property="og:description" content="宋新奥的产品与 UX 设计作品集，包含消费选购体验、商家端工具和界面设计项目。"><meta property="og:locale" content="zh_CN"><meta property="og:site_name" content="宋新奥 · 设计作品集"><meta property="og:title" content="宋新奥 · 设计作品集"><meta property="og:type" content="website"><!-- Google tag (gtag.js) --><link rel="stylesheet" href="/about/_astro/about.CNa9RfUh.css?v=menu-states">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><base href="/about/"><meta name="description" content="宋新奥的产品与 UX 设计作品集，包含消费选购体验、商家端工具和界面设计项目。"><link id="apple-touch-icon" rel="apple-touch-icon" sizes="180x180" href="./assets/meta/apple-touch-icon.png"><link id="icon32" rel="icon" type="image/png" sizes="32x32" href="./assets/meta/favicon-32x32.png" media="(prefers-color-scheme: light)"><link id="icon32" rel="icon" type="image/png" sizes="32x32" href="./assets/meta/dark/favicon-32x32.png" media="(prefers-color-scheme: dark)"><link id="icon64" rel="icon" type="image/png" sizes="16x16" href="./assets/meta/favicon-16x16.png" media="(prefers-color-scheme: light)"><link id="icon64" rel="icon" type="image/png" sizes="16x16" href="./assets/meta/dark/favicon-16x16.png" media="(prefers-color-scheme: dark)"><link href="./assets/meta/favicon.ico" rel="shortcut icon" media="(prefers-color-scheme: light)"><link href="./assets/meta/dark/favicon.ico" rel="shortcut icon" media="(prefers-color-scheme: dark)"><link id="manifest" rel="manifest" href="./assets/meta/site.webmanifest"><link rel="mask-icon" href="./assets/meta/safari-pinned-tab.svg" color="#000000"><meta name="msapplication-TileColor" content="#ffffff"><meta name="theme-color" content="#ffffff"><meta property="og:description" content="宋新奥的产品与 UX 设计作品集，包含消费选购体验、商家端工具和界面设计项目。"><meta property="og:locale" content="zh_CN"><meta property="og:site_name" content="宋新奥 · 设计作品集"><meta property="og:title" content="宋新奥 · 设计作品集"><meta property="og:type" content="website"><!-- Google tag (gtag.js) --><link rel="stylesheet" href="/about/_astro/about.CNa9RfUh.css?v=menu-states"><script type="module" src="/about/_astro/hoisted.CUO_IjfL.js?v=loading-bar-restored"></script>
 <meta name="format-detection" content="telephone=no">
 <style>
   html.is-black-bg body {
     background-color: var(--color-black);
   }
 
-  html:not(.portfolio-enhanced),
-  html:not(.portfolio-enhanced) body {
-    height: auto;
-    min-height: 100%;
-    overflow: visible;
+  #about-opening {
+    position: fixed;
+    inset: 0;
+    z-index: 110;
+    display: grid;
+    place-items: center;
+    background: var(--color-black);
+    color: var(--color-off-white);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
   }
 
-  html:not(.portfolio-enhanced) {
-    overflow-x: clip;
-  }
-
-  html:not(.portfolio-enhanced) #ui {
-    position: relative;
-  }
-
-  html:not(.portfolio-enhanced) #page-container {
-    transform: none !important;
-  }
-
-  html:not(.portfolio-enhanced) :is(#canvas, #input-blocker, #header-center-project-back-btn) {
-    display: none;
-  }
-
-  html:not(.portfolio-enhanced) #header {
-    color: #f5f5f5;
-    background: linear-gradient(#0b0b12e8, #0b0b1200);
-  }
-
-  html:not(.portfolio-enhanced) #header #header-menu.--opened {
+  .about-starting #about-opening {
+    opacity: 1;
+    visibility: visible;
     pointer-events: auto;
   }
 
-  html:not(.portfolio-enhanced) #header #header-menu-links {
-    --open-delay: 0s;
-    --close-delay: 0s;
+  #about-opening-progress {
+    width: 3.5rem;
+    height: 4px;
+    border-radius: 2px;
+    background: rgb(240 241 250 / 18%);
+    overflow: hidden;
+    visibility: hidden;
   }
 
-  html:not(.portfolio-enhanced) #page-container .section:not(#about-who) {
-    scroll-margin-top: 7rem;
+  .about-starting #about-opening-progress {
+    animation: about-opening-show 0s .5s forwards;
   }
 
-  html:not(.portfolio-enhanced) #about-capability-cards-wrapper {
-    margin-bottom: 5em;
+  #about-opening-progress::after {
+    content: "";
+    display: block;
+    height: 100%;
+    background: currentColor;
+    border-radius: inherit;
+    transform: scaleX(var(--opening-progress, 0));
+    transform-origin: left center;
+    transition: transform .18s ease-out;
   }
 
-  @media (min-width: 813px) {
-    html:not(.portfolio-enhanced) #about-capability-cards {
-      display: flex;
-      justify-content: center;
-      gap: var(--grid-gap);
-      height: auto !important;
-    }
+  #about-opening-retry {
+    position: absolute;
+    top: calc(50% + 1rem);
+    padding: .75rem;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: 400 .875rem system-ui, sans-serif;
+    text-decoration: underline;
+    cursor: pointer;
+    visibility: hidden;
+  }
 
-    html:not(.portfolio-enhanced) #about-capability[data-case-studies] .about-capability-card {
-      position: relative;
+  .about-starting #about-opening-retry {
+    animation: about-opening-show 0s 15s forwards;
+  }
+
+  @keyframes about-opening-show {
+    to { visibility: visible; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #about-opening-progress::after {
+      transition: none;
     }
   }
 
@@ -623,11 +576,15 @@
   }
 </style>
 <link rel="stylesheet" href="assets/cover/logo-wall.css?v=cover-spacing-4">
-<link rel="stylesheet" href="assets/cover/edge-spectrum/cover.css?v=progressive-cover">
+<link rel="stylesheet" href="assets/cover/edge-spectrum/cover.css?v=original-mouse-effect">
 <link rel="stylesheet" href="assets/cover/edge-spectrum/header.css?v=black-menu-dot">
-<script type="module" src="assets/cover/edge-spectrum/cover.mjs?v=progressive-cover"></script>
+<script type="module" src="assets/cover/edge-spectrum/cover.mjs?v=original-mouse-effect"></script>
 </head> <body>
-<canvas id="canvas"></canvas> <div id="ui"> <header id="header"> <div id="header-container"> <div id="header-background"></div> <a id="header-logo" href="/about/#about-who" aria-label="宋新奥 · 作品集首页"><span lang="en">SONGXINAO</span></a>
+<div id="about-opening">
+  <div id="about-opening-progress" role="progressbar" aria-label="首屏加载" lang="zh-CN" aria-valuenow="0"></div>
+  <button id="about-opening-retry" lang="zh-CN" type="button" onclick="location.reload()">重新加载</button>
+</div>
+<canvas id="canvas"></canvas> <div id="ui" inert> <header id="header"> <div id="header-container"> <div id="header-background"></div> <a id="header-logo" href="/about/#about-who" aria-label="宋新奥 · 作品集首页"><span lang="en">SONGXINAO</span></a>
  <div id="header-center"> <button id="header-center-project-back-btn" aria-label="Back"> <svg id="header-center-project-back-btn-svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M8 12.243 3.757 8m0 0L8 3.757M3.757 8h8.486"></path></svg> <p id="header-center-project-back-btn-text">back</p> <svg id="header-center-project-back-btn-svg2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M8 12.243 3.757 8m0 0L8 3.757M3.757 8h8.486"></path></svg> <div id="project-details-header-back-background"></div> </button> </div> <nav id="header-right" aria-label="主导航"> <div id="header-right-sound-btn" aria-hidden="true"><canvas></canvas></div>   <button id="header-right-talk-btn-placeholder"></button> <button id="header-right-talk-btn" type="button" lang="zh-CN" data-scroll-to="profile" aria-controls="profile"> <div id="header-right-talk-container"> <span id="header-right-talk-btn-text">联系方式</span> </div> </button> <button id="header-case-studies-btn" type="button" data-scroll-to="about-capability" aria-controls="about-capability">项目案例</button> <button id="header-right-menu-btn" type="button" lang="zh-CN" aria-controls="header-menu" aria-expanded="false" aria-label="导航"> <div id="header-right-menu-btn-inner"> <span id="header-right-menu-btn-text" aria-hidden="true">导航</span> <span id="header-right-menu-btn-text-close" aria-hidden="true">关闭</span> </div> </button> </nav> <div id="header-menu" inert lang="zh-CN">
   <nav id="header-menu-links" aria-label="作品集导航">
     <button type="button" class="header-menu-link" data-scroll-to="about-who" aria-controls="about-who">
@@ -677,7 +634,7 @@
 </div>
 </header> <div id="page-container"> <div id="page-container-inner"> <div id="about" class="page"> <section id="about-who" class="section" data-edge-spectrum aria-labelledby="hero-title">
   <h1 class="sr-only" id="hero-title" lang="en"><span>SONGXINAO</span><br><span>2026 PORTFOLIO</span></h1>
-  <div class="art" id="art" role="group">
+  <div class="art" id="art" role="group" tabindex="0" aria-label="可旋转的玻璃方块，拖动或使用方向键旋转。">
     <canvas id="room-light" aria-hidden="true" hidden></canvas>
     <canvas id="headline-outline" aria-hidden="true" hidden></canvas>
     <canvas id="headline" aria-hidden="true"></canvas>
@@ -1006,5 +963,4 @@
     });
   </script>
 </section> </div> </div> <div id="page-extra-sections"> <div id="end-section" class="section"> <div id="end-section-outer"> <div id="end-section-inner"> <div id="end-section-content"> <div id="end-section-content-crosses"> <div class="end-section-content-cross"></div> <div class="end-section-content-cross"></div> <div class="end-section-content-cross"></div> <div class="end-section-content-cross"></div> <div class="end-section-content-cross"></div> </div> <div id="end-section-subtitle"> <div id="end-section-subtitle-text" lang="en">Song Xin’ao · Product Designer</div> </div> <div id="end-section-title"> <div id="end-section-title-link" role="heading" aria-level="2" aria-label="感谢浏览" lang="zh-CN">感谢浏览</div> <span id="end-section-title-top-decoration"></span> <span id="end-section-title-bottom-left-decoration"></span> <span id="end-section-title-bottom-right-decoration"></span> </div> </div> </div> </div> </div>   </div> </div> </div> <div id="scroll-indicator"> <div id="scroll-indicator-bar"></div> </div> <div id="input-blocker"></div> <div id="video-overlay"> <div id="video-overlay__vimeo-video"></div> <div id="video-overlay__mobile-close-btn"> <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M3.75781 3.75732L12.2431 12.2426" stroke="white" stroke-width="2" stroke-linecap="round"></path> <path d="M12.2422 3.75732L3.75691 12.2426" stroke="white" stroke-width="2" stroke-linecap="round"></path> </svg> </div> <div id="video-overlay__controls"> <button id="video-overlay__play-btn">PLAY</button> <div id="video-overlay__progress-container"> <div id="video-overlay__progress-active"></div> <div id="video-overlay__progress-bg"></div> </div> <button id="video-overlay__mute-btn">MUTE</button> </div> <div id="video-overlay-cursor"> <svg id="video-overlay-cursor-svg" xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none" viewBox="0 0 36 36"><path stroke="#020022" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M31 31 17.928 18 31 5M5 5l13.072 13L5 31"></path></svg> </div> </div> <canvas id="transition-overlay" style="display: none"></canvas>
-
 </body></html>
